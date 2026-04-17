@@ -1,0 +1,99 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Ghost, Menu, X } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+export function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navLinks = [
+    { name: "Features", href: "#features" },
+    { name: "How it Works", href: "#how-it-works" },
+    { name: "Pricing", href: "#pricing" },
+  ];
+
+  return (
+    <nav 
+      className={cn(
+        "fixed top-0 left-0 right-0 z-[100] transition-all duration-300 px-4",
+        isScrolled ? "py-4" : "py-8"
+      )}
+    >
+      <div 
+        className={cn(
+          "container mx-auto max-w-6xl rounded-2xl transition-all duration-300 flex items-center justify-between px-6",
+          isScrolled ? "glass py-3 shadow-lg" : "py-4"
+        )}
+      >
+        {/* Logo */}
+        <a href="#" className="flex items-center gap-2 group">
+          <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-all">
+             <Ghost className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
+          </div>
+          <span className="font-outfit font-bold text-2xl text-white tracking-tight">GhostLy</span>
+        </a>
+
+        {/* Desktop Nav */}
+        <div className="hidden md:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <a 
+              key={link.name} 
+              href={link.href} 
+              className="text-sm font-medium text-neutral-400 hover:text-white transition-colors"
+            >
+              {link.name}
+            </a>
+          ))}
+          <button className="px-5 py-2.5 bg-primary text-primary-foreground font-bold rounded-xl text-sm hover:brightness-110 transition-all active:scale-95">
+            Download App
+          </button>
+        </div>
+
+        {/* Mobile Toggle */}
+        <button 
+          className="md:hidden text-white p-2"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          {mobileMenuOpen ? <X /> : <Menu />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="absolute top-24 left-4 right-4 glass rounded-3xl p-6 md:hidden flex flex-col gap-4 z-[99]"
+          >
+            {navLinks.map((link) => (
+              <a 
+                key={link.name} 
+                href={link.href} 
+                className="text-lg font-medium text-white p-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {link.name}
+              </a>
+            ))}
+            <button className="w-full py-4 bg-primary text-primary-foreground font-bold rounded-2xl mt-4">
+              Download App
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
+  );
+}
