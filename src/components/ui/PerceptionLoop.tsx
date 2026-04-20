@@ -29,8 +29,8 @@ export function PerceptionLoop() {
             key={stage.id}
             onClick={() => setActiveStage(i)}
             className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-500 border ${activeStage === i
-                ? `bg-white/10 border-white/20 ${stage.color} shadow-[0_0_20px_rgba(255,255,255,0.05)]`
-                : "bg-transparent border-white/5 text-white/30 hover:border-white/10"
+              ? `bg-white/10 border-white/20 ${stage.color} shadow-[0_0_20px_rgba(255,255,255,0.05)]`
+              : "bg-transparent border-white/5 text-white/30 hover:border-white/10"
               }`}
           >
             <stage.icon className="w-4 h-4" />
@@ -166,7 +166,7 @@ export function PerceptionLoop() {
                 </div>
 
                 <div className="text-sm text-white/90 leading-relaxed font-outfit mb-6">
-                  "I've identified the <span className="text-primary font-bold">harvest_context</span> function. It performs an asynchronous screen capture and delegates the results to the induction tier for structural analysis."
+                  &quot;I&apos;ve identified the <span className="text-primary font-bold">harvest_context</span> function. It performs an asynchronous screen capture and delegates the results to the induction tier for structural analysis.&quot;
                 </div>
 
                 <div className="rounded-xl border border-white/10 bg-black/40 p-4 font-mono text-[10px] text-white/60 mb-8">

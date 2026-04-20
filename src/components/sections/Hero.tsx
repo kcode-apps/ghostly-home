@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { HUDMockup } from "@/components/ui/HUDMockup";
 
 export function Hero() {

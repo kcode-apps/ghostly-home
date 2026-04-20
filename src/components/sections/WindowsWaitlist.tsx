@@ -10,7 +10,7 @@ export function WindowsWaitlist() {
         <div className="glass max-w-4xl mx-auto rounded-[40px] p-8 md:p-12 relative overflow-hidden">
           {/* Background Glow */}
           <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-primary/10 rounded-full blur-[100px]" />
-          
+
           <div className="flex flex-col md:flex-row items-center justify-between gap-12 relative z-10">
             <div className="flex-1 text-center md:text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/50 text-[10px] font-bold uppercase tracking-widest mb-4">
@@ -21,13 +21,13 @@ export function WindowsWaitlist() {
                 Not a Mac user?
               </h2>
               <p className="text-muted-foreground">
-                We're building GhostLy for Windows. Join the exclusive waitlist to be synchronized first.
+                We&apos;re building GhostLy for Windows. Join the exclusive waitlist to be synchronized first.
               </p>
             </div>
 
             <div className="w-full md:w-auto flex flex-col sm:flex-row gap-3">
-              <input 
-                type="email" 
+              <input
+                type="email"
                 placeholder="Enter your email..."
                 className="px-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder:text-neutral-600 outline-none focus:border-primary/50 transition-all min-w-[280px]"
               />
