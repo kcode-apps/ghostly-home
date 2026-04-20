@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { MousePointer2, ScanSearch, MessageSquareQuote } from "lucide-react";
+import { PerceptionLoop } from "@/components/ui/PerceptionLoop";
 
 const steps = [
   {
@@ -76,46 +77,7 @@ export function HowItWorks() {
           ))}
         </div>
         
-        {/* Interactive Visual Placeholder */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-24 p-8 glass rounded-[40px] max-w-4xl mx-auto border-white/5"
-        >
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-             <div className="aspect-square bg-white/5 rounded-3xl border border-white/10 flex items-center justify-center overflow-hidden">
-                <div className="w-4/5 h-4/5 border border-primary/20 rounded-2xl bg-primary/5 flex flex-col p-4">
-                   <div className="w-1/3 h-4 bg-primary/30 rounded-full mb-4" />
-                   <div className="space-y-2">
-                      <div className="w-full h-2 bg-white/10 rounded-full" />
-                      <div className="w-5/6 h-2 bg-white/10 rounded-full" />
-                      <div className="w-4/6 h-2 bg-white/10 rounded-full" />
-                   </div>
-                </div>
-             </div>
-             <div className="text-left">
-                <div className="inline-flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest mb-4">
-                   <div className="w-2 h-2 rounded-full bg-primary animate-ping" />
-                   Live Capture Active
-                </div>
-                <h4 className="text-2xl font-bold text-white mb-4 font-outfit">
-                   Ready for Anything.
-                </h4>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                   Whether you're analyzing complex spreadsheets, summarizing long reports, or drafting contextual emails—GhostLy is always ready with the full context of your screen.
-                </p>
-                <div className="flex gap-4">
-                   <div className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-[10px] font-mono text-white/50">
-                      ⌥ + ⇧ + G
-                   </div>
-                   <div className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-[10px] font-mono text-white/50">
-                      MODAL_ACTIVE: TRUE
-                   </div>
-                </div>
-             </div>
-          </div>
-        </motion.div>
+        <PerceptionLoop />
       </div>
     </section>
   );

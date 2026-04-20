@@ -1,0 +1,229 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Scan, MessageSquare, ArrowRight, MousePointer2 } from "lucide-react";
+
+const STAGES = [
+  { id: "summon", label: "Summon", icon: MousePointer2, color: "text-teal-400" },
+  { id: "scan", label: "Perception", icon: Scan, color: "text-blue-400" },
+  { id: "assist", label: "Assistance", icon: MessageSquare, color: "text-indigo-400" },
+];
+
+export function PerceptionLoop() {
+  const [activeStage, setActiveStage] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveStage((prev) => (prev + 1) % STAGES.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="w-full max-w-5xl mx-auto mt-12">
+      {/* Stage Indicators */}
+      <div className="flex justify-center gap-4 mb-12">
+        {STAGES.map((stage, i) => (
+          <button
+            key={stage.id}
+            onClick={() => setActiveStage(i)}
+            className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-500 border ${
+              activeStage === i
+                ? `bg-white/10 border-white/20 ${stage.color} shadow-[0_0_20px_rgba(255,255,255,0.05)]`
+                : "bg-transparent border-white/5 text-white/30 hover:border-white/10"
+            }`}
+          >
+            <stage.icon className="w-4 h-4" />
+            <span className="text-xs font-bold uppercase tracking-widest">{stage.label}</span>
+          </button>
+        ))}
+      </div>
+
+      <div className="grid lg:grid-cols-2 gap-8 items-stretch h-[450px]">
+        {/* Panel A: The Source (Perception Target) */}
+        <div className="relative glass rounded-[2.5rem] overflow-hidden group border-white/5 bg-black/20 p-8 flex flex-col">
+          <div className="flex items-center gap-2 mb-6 border-b border-white/5 pb-4">
+            <div className="flex gap-1.5">
+              <div className="w-2.5 h-2.5 rounded-full bg-red-400/50" />
+              <div className="w-2.5 h-2.5 rounded-full bg-yellow-400/50" />
+              <div className="w-2.5 h-2.5 rounded-full bg-green-400/50" />
+            </div>
+            <div className="ml-4 px-3 py-1 rounded bg-white/5 text-[10px] font-mono text-white/30">
+              src/services/perception.rs
+            </div>
+          </div>
+
+          <div className="flex-1 font-mono text-sm space-y-2 opacity-60 relative">
+            <div className="flex gap-4">
+              <span className="text-white/20">1</span>
+              <span className="text-teal-400">pub async fn</span>
+              <span className="text-white/80">harvest_context() &#123;</span>
+            </div>
+            <div className="flex gap-4">
+              <span className="text-white/20">2</span>
+              <span className="text-white/80 ml-4">let screen = Screen::capture().await?;</span>
+            </div>
+            <div className="flex gap-4">
+              <span className="text-white/20">3</span>
+              <span className="text-blue-400 ml-4">let induction = Induction::analyze(screen).await?;</span>
+            </div>
+            <div className="flex gap-4">
+              <span className="text-white/20">4</span>
+              <span className="text-white/80 ml-4">InductionResult::Success(induction)</span>
+            </div>
+            <div className="flex gap-4">
+              <span className="text-white/20">5</span>
+              <span className="text-white/80">&#125;</span>
+            </div>
+
+            {/* Scanning Laser Line */}
+            {activeStage === 1 && (
+              <motion.div
+                initial={{ top: "0%" }}
+                animate={{ top: "100%" }}
+                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-x-0 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent blur-sm z-20"
+              />
+            )}
+
+            {/* Anchors */}
+            <AnimatePresence>
+              {activeStage >= 1 && (
+                <>
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0 }}
+                    style={{ left: "20%", top: "35%" }}
+                    className="absolute w-3 h-3 rounded-full bg-primary/40 border border-primary shadow-[0_0_15px_rgba(20,184,166,0.5)] z-10"
+                  />
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0 }}
+                    style={{ left: "60%", top: "50%" }}
+                    className="absolute w-2 h-2 rounded-full bg-blue-400/40 border border-blue-400 shadow-[0_0_15px_rgba(96,165,250,0.5)] z-10"
+                  />
+                </>
+              )}
+            </AnimatePresence>
+          </div>
+
+          <div className="mt-auto pt-6 border-t border-white/5 flex items-center justify-between text-[10px] uppercase tracking-widest font-bold text-white/20">
+            <span>PERCEPTION_TETHER_ACTIVE</span>
+            <div className="flex gap-2">
+              <div className={`w-2 h-2 rounded-full ${activeStage === 1 ? "bg-primary animate-pulse" : "bg-white/10"}`} />
+              <div className="w-2 h-2 rounded-full bg-white/10" />
+            </div>
+          </div>
+        </div>
+
+        {/* Panel B: The GhostLy HUD (Induction Output) */}
+        <div className="relative glass rounded-[2.5rem] bg-[#171717]/60 p-8 border-white/10 flex flex-col shadow-2xl">
+          <AnimatePresence mode="wait">
+            {activeStage === 0 && (
+              <motion.div
+                key="stage0"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 1.05 }}
+                className="flex-1 flex flex-col items-center justify-center text-center px-4"
+              >
+                <div className="w-16 h-16 rounded-3xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
+                  <MousePointer2 className="w-8 h-8 text-primary" />
+                </div>
+                <h5 className="text-xl font-bold text-white mb-2 font-outfit">Summon anywhere.</h5>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Press <kbd className="px-1.5 py-0.5 rounded bg-white/5 border border-white/10 text-[10px] text-white/50">⌥ + G</kbd> to activate the ephemeral bridge between perception and induction.
+                </p>
+              </motion.div>
+            )}
+
+            {activeStage === 1 && (
+              <motion.div
+                key="stage1"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                className="flex-1 flex flex-col pt-4"
+              >
+                <div className="flex justify-between items-center mb-12">
+                  <div className="h-4 w-32 bg-primary/20 rounded-full animate-pulse" />
+                  <div className="flex gap-2">
+                     <div className="w-6 h-6 rounded-lg bg-white/5 border border-white/10" />
+                     <div className="w-6 h-6 rounded-lg bg-white/5 border border-white/10" />
+                  </div>
+                </div>
+                <div className="space-y-4">
+                   <div className="h-2 w-full bg-white/5 rounded-full" />
+                   <div className="h-2 w-5/6 bg-white/5 rounded-full" />
+                   <div className="h-2 w-4/6 bg-white/10 rounded-full animate-pulse" />
+                </div>
+                <div className="mt-auto pb-4">
+                   <div className="text-[10px] font-mono text-primary/60 uppercase tracking-widest mb-2">Analyzing Structural Context...</div>
+                   <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden">
+                      <motion.div 
+                        initial={{ width: "0%" }}
+                        animate={{ width: "100%" }}
+                        transition={{ duration: 3, repeat: Infinity }}
+                        className="h-full bg-primary shadow-[0_0_10px_rgba(20,184,166,0.5)]"
+                      />
+                   </div>
+                </div>
+              </motion.div>
+            )}
+
+            {activeStage === 2 && (
+              <motion.div
+                key="stage2"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                className="flex-1 flex flex-col"
+              >
+                <div className="flex items-center gap-2 mb-6">
+                  <div className="w-2 h-2 rounded-full bg-primary" />
+                  <span className="text-[10px] font-bold text-white/40 uppercase tracking-tighter">GhostLy Assistance</span>
+                </div>
+                
+                <div className="text-sm text-white/90 leading-relaxed font-outfit mb-6">
+                  "I've identified the <span className="text-primary font-bold">harvest_context</span> function. It performs an asynchronous screen capture and delegates the results to the induction tier for structural analysis."
+                </div>
+
+                <div className="rounded-xl border border-white/10 bg-black/40 p-4 font-mono text-[10px] text-white/60 mb-8">
+                  <div className="flex justify-between mb-2 pb-2 border-b border-white/5">
+                     <span className="text-primary/60 uppercase text-[8px]">Action Recommendation</span>
+                     <span className="text-white/20">copy</span>
+                  </div>
+                  Induction::analyze(screen).await?
+                </div>
+
+                <div className="mt-auto px-4 py-3 rounded-xl border border-primary/20 bg-primary/5 flex items-center justify-between">
+                  <span className="text-xs text-white/40">Ask follows up...</span>
+                  <ArrowRight className="w-4 h-4 text-primary" />
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          {/* Interactive Connectors (Visual Parity bridge) */}
+          {activeStage >= 1 && (
+              <svg className="absolute inset-0 pointer-events-none z-0 overflow-visible" width="100%" height="100%">
+                <motion.path
+                  initial={{ pathLength: 0, opacity: 0 }}
+                  animate={{ pathLength: 1, opacity: 0.1 }}
+                  transition={{ duration: 1.5 }}
+                  d="M -150 150 Q -50 150 0 100"
+                  fill="none"
+                  stroke="var(--color-primary)"
+                  strokeWidth="2"
+                  strokeDasharray="4 4"
+                />
+              </svg>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}

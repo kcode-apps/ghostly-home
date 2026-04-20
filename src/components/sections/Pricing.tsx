@@ -124,14 +124,14 @@ export function Pricing() {
              
              <div className="grid md:grid-cols-2 gap-x-8 gap-y-4 mb-12">
                 {[
-                   "Unlimited Screen Capture",
-                   "BYOK (Zero Markup)",
-                   "Semantic Token Optimization",
-                   "Stealth Screen-Share Mode",
-                   "Multiple LLM Support",
-                   "Lifetime Feature Updates",
-                   "Secure Keychain Storage",
-                   "Direct Context Extraction"
+                   "Claude 3.5 & GPT-4o",
+                   "Gemini 1.5 Pro support",
+                   "Your own API keys",
+                   "Lower AI token costs",
+                   "Hidden from Screen Share",
+                   "Lifetime Updates",
+                   "Secure, Local Storage",
+                   "Always Private"
                 ].map(f => (
                    <div key={f} className="flex items-center gap-3 text-sm text-neutral-200">
                       <Check className="w-4 h-4 text-primary shrink-0" />
@@ -152,9 +152,9 @@ export function Pricing() {
         </div>
         
         <div className="mt-20 text-center max-w-2xl mx-auto p-6 rounded-3xl border border-white/5 bg-white/[0.02]">
-           <h4 className="text-white font-bold mb-2">Why BYOK?</h4>
+           <h4 className="text-white font-bold mb-2">Total Control, Zero Fees</h4>
            <p className="text-muted-foreground text-sm">
-              Standard AI apps charge $20/month for access. We don't. With **Bring Your Own Key**, you pay GhostLy once and pay the LLM providers pennies for your actual usage. **Total control. Zero middleman markup.**
+              Standard AI apps charge $20/month for access. **GhostLy doesn't.** By using your own API keys, you pay GhostLy once and access raw intelligence for just the pennies you actually use. **No middleman markups. No monthly subscriptions.**
            </p>
         </div>
       </div>

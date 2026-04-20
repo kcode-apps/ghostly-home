@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { HUDMockup } from "@/components/ui/HUDMockup";
 
 export function Hero() {
   return (
@@ -20,10 +21,7 @@ export function Hero() {
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest leading-none">
             <Sparkles className="w-3 h-3" />
-            The Future of Productivity
-          </div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/50 text-[10px] font-bold uppercase tracking-widest leading-none">
-            BYOK • $20 Lifetime
+            Your Private AI HUD
           </div>
         </motion.div>
 
@@ -33,9 +31,9 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="font-outfit text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-6"
         >
-          Your Desktop, <br />
+          Desktop Intelligence. <br />
           <span className="bg-gradient-to-r from-primary via-teal-400 to-blue-500 bg-clip-text text-transparent">
-            Supercharged.
+            Supercharged
           </span>
         </motion.h1>
 
@@ -45,8 +43,8 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed"
         >
-          Access Gemini, Claude, and GPT-4o in a non-interruptive Heads Up Display (HUD). <br />
-          Stay in your flow. A private bridge between your eyes and AI.
+          Access Gemini, Claude, and GPT-4o instantly, directly on top of your work. <br />
+          Stay in your flow with a non-interruptive HUD that understands your screen.
         </motion.p>
 
         <motion.div
@@ -69,38 +67,15 @@ export function Hero() {
 
         {/* Floating HUD Mockup */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9, y: 100 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5, ease: "circOut" }}
-          className="mt-20 relative max-w-5xl mx-auto"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-16 sm:mt-24 lg:mt-32 w-full max-w-4xl mx-auto px-4"
         >
-          <div className="relative glass rounded-3xl p-4 shadow-2xl border-white/20 aspect-[16/9] flex items-center justify-center group overflow-hidden">
-            {/* Simulating HUD Content */}
-            <div className="absolute inset-0 bg-glow opacity-50" />
-            <div className="w-2/3 h-1/2 rounded-2xl border border-primary/30 bg-primary/5 backdrop-blur-md flex flex-col p-6 text-left">
-              <div className="flex justify-between items-center mb-4 pb-2 border-b border-white/10">
-                <div className="w-24 h-4 bg-primary/20 rounded-full animate-pulse" />
-                <div className="w-12 h-4 bg-white/10 rounded-full" />
-              </div>
-              <div className="space-y-3">
-                <div className="w-full h-3 bg-white/5 rounded-full" />
-                <div className="w-5/6 h-3 bg-white/5 rounded-full" />
-                <div className="w-4/6 h-3 bg-white/5 rounded-full" />
-              </div>
-              <div className="mt-auto flex gap-2">
-                <div className="w-20 h-8 rounded-lg bg-primary/40" />
-                <div className="w-8 h-8 rounded-lg bg-white/10" />
-              </div>
-            </div>
-
-            {/* Animated Accents */}
-            <div className="absolute top-10 right-10 w-32 h-32 border-r-2 border-t-2 border-primary/20 rounded-tr-3xl" />
-            <div className="absolute bottom-10 left-10 w-32 h-32 border-l-2 border-b-2 border-primary/20 rounded-bl-3xl" />
-          </div>
-
-          {/* Subtle reflection under HUD */}
-          <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-4/5 h-20 bg-primary/10 blur-[60px] rounded-[100%]" />
+          <HUDMockup />
         </motion.div>
+        {/* Subtle reflection under HUD */}
+        <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-4/5 h-32 bg-primary/10 blur-[100px] rounded-[100%] opacity-50" />
       </div>
     </section>
   );
