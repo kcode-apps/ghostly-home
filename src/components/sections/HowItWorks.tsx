@@ -29,7 +29,7 @@ export function HowItWorks() {
   return (
     <section id="how-it-works" className="py-24 relative overflow-hidden bg-background">
       {/* Connector Line (Desktop) */}
-      <div className="absolute left-1/2 top-48 bottom-48 w-px bg-gradient-to-b from-primary/50 via-teal-500/20 to-transparent hidden lg:block" />
+
 
       <div className="container px-4 mx-auto">
         <div className="text-center mb-20">
@@ -42,7 +42,7 @@ export function HowItWorks() {
             How it <span className="text-teal-400">Works.</span>
           </motion.h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-             Power at your fingertips. 3 simple steps to integrate GhostLy into your workflow.
+            Power at your fingertips. 3 simple steps to integrate GhostLy into your workflow.
           </p>
         </div>
 
@@ -58,10 +58,10 @@ export function HowItWorks() {
             >
               {/* Step Number Circle */}
               <div className="relative z-10 w-20 h-20 rounded-full glass border-2 border-primary/20 flex items-center justify-center mb-8 group-hover:border-primary/50 transition-all shadow-xl">
-                 <step.icon className="w-8 h-8 text-primary" />
-                 <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary text-primary-foreground font-bold text-sm flex items-center justify-center border-4 border-background">
-                    {index + 1}
-                 </div>
+                <step.icon className="w-8 h-8 text-primary" />
+                <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-primary text-primary-foreground font-bold text-sm flex items-center justify-center border-4 border-background">
+                  {index + 1}
+                </div>
               </div>
 
               <h3 className="text-2xl font-bold text-white mb-4 font-outfit">
@@ -76,7 +76,7 @@ export function HowItWorks() {
             </motion.div>
           ))}
         </div>
-        
+
         <PerceptionLoop />
       </div>
     </section>

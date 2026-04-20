@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Copy, Sun, Settings, Pin } from "lucide-react";
+import { Logo } from "./Logo";
 
 export function HUDMockup() {
   return (
@@ -17,8 +18,9 @@ export function HUDMockup() {
         className="relative w-full max-w-[600px] mx-auto aspect-[16/10] bg-[#1a1a1a]/80 backdrop-blur-3xl rounded-[2rem] border border-white/10 shadow-2xl flex flex-col p-6 overflow-hidden"
       >
         {/* Header Logic */}
-        <div className="flex items-center justify-between mb-8">
-          <div className="flex items-center gap-2">
+        <div className="flex items-center justify-between mb-8 pb-3 border-b border-white/5">
+          <div className="flex items-center gap-3">
+            <Logo variant="mark-only" size={32} />
             <span className="font-outfit text-xl font-bold tracking-tight bg-gradient-to-r from-primary to-teal-400 bg-clip-text text-transparent">
               GhostLy
             </span>

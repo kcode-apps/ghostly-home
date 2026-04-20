@@ -28,11 +28,10 @@ export function PerceptionLoop() {
           <button
             key={stage.id}
             onClick={() => setActiveStage(i)}
-            className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-500 border ${
-              activeStage === i
+            className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-500 border ${activeStage === i
                 ? `bg-white/10 border-white/20 ${stage.color} shadow-[0_0_20px_rgba(255,255,255,0.05)]`
                 : "bg-transparent border-white/5 text-white/30 hover:border-white/10"
-            }`}
+              }`}
           >
             <stage.icon className="w-4 h-4" />
             <span className="text-xs font-bold uppercase tracking-widest">{stage.label}</span>
@@ -87,27 +86,6 @@ export function PerceptionLoop() {
               />
             )}
 
-            {/* Anchors */}
-            <AnimatePresence>
-              {activeStage >= 1 && (
-                <>
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0 }}
-                    style={{ left: "20%", top: "35%" }}
-                    className="absolute w-3 h-3 rounded-full bg-primary/40 border border-primary shadow-[0_0_15px_rgba(20,184,166,0.5)] z-10"
-                  />
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0 }}
-                    style={{ left: "60%", top: "50%" }}
-                    className="absolute w-2 h-2 rounded-full bg-blue-400/40 border border-blue-400 shadow-[0_0_15px_rgba(96,165,250,0.5)] z-10"
-                  />
-                </>
-              )}
-            </AnimatePresence>
           </div>
 
           <div className="mt-auto pt-6 border-t border-white/5 flex items-center justify-between text-[10px] uppercase tracking-widest font-bold text-white/20">
@@ -151,25 +129,25 @@ export function PerceptionLoop() {
                 <div className="flex justify-between items-center mb-12">
                   <div className="h-4 w-32 bg-primary/20 rounded-full animate-pulse" />
                   <div className="flex gap-2">
-                     <div className="w-6 h-6 rounded-lg bg-white/5 border border-white/10" />
-                     <div className="w-6 h-6 rounded-lg bg-white/5 border border-white/10" />
+                    <div className="w-6 h-6 rounded-lg bg-white/5 border border-white/10" />
+                    <div className="w-6 h-6 rounded-lg bg-white/5 border border-white/10" />
                   </div>
                 </div>
                 <div className="space-y-4">
-                   <div className="h-2 w-full bg-white/5 rounded-full" />
-                   <div className="h-2 w-5/6 bg-white/5 rounded-full" />
-                   <div className="h-2 w-4/6 bg-white/10 rounded-full animate-pulse" />
+                  <div className="h-2 w-full bg-white/5 rounded-full" />
+                  <div className="h-2 w-5/6 bg-white/5 rounded-full" />
+                  <div className="h-2 w-4/6 bg-white/10 rounded-full animate-pulse" />
                 </div>
                 <div className="mt-auto pb-4">
-                   <div className="text-[10px] font-mono text-primary/60 uppercase tracking-widest mb-2">Analyzing Structural Context...</div>
-                   <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden">
-                      <motion.div 
-                        initial={{ width: "0%" }}
-                        animate={{ width: "100%" }}
-                        transition={{ duration: 3, repeat: Infinity }}
-                        className="h-full bg-primary shadow-[0_0_10px_rgba(20,184,166,0.5)]"
-                      />
-                   </div>
+                  <div className="text-[10px] font-mono text-primary/60 uppercase tracking-widest mb-2">Analyzing Structural Context...</div>
+                  <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden">
+                    <motion.div
+                      initial={{ width: "0%" }}
+                      animate={{ width: "100%" }}
+                      transition={{ duration: 3, repeat: Infinity }}
+                      className="h-full bg-primary shadow-[0_0_10px_rgba(20,184,166,0.5)]"
+                    />
+                  </div>
                 </div>
               </motion.div>
             )}
@@ -186,21 +164,21 @@ export function PerceptionLoop() {
                   <div className="w-2 h-2 rounded-full bg-primary" />
                   <span className="text-[10px] font-bold text-white/40 uppercase tracking-tighter">GhostLy Assistance</span>
                 </div>
-                
+
                 <div className="text-sm text-white/90 leading-relaxed font-outfit mb-6">
                   "I've identified the <span className="text-primary font-bold">harvest_context</span> function. It performs an asynchronous screen capture and delegates the results to the induction tier for structural analysis."
                 </div>
 
                 <div className="rounded-xl border border-white/10 bg-black/40 p-4 font-mono text-[10px] text-white/60 mb-8">
                   <div className="flex justify-between mb-2 pb-2 border-b border-white/5">
-                     <span className="text-primary/60 uppercase text-[8px]">Action Recommendation</span>
-                     <span className="text-white/20">copy</span>
+                    <span className="text-primary/60 uppercase text-[8px]">Action Recommendation</span>
+                    <span className="text-white/20">copy</span>
                   </div>
                   Induction::analyze(screen).await?
                 </div>
 
                 <div className="mt-auto px-4 py-3 rounded-xl border border-primary/20 bg-primary/5 flex items-center justify-between">
-                  <span className="text-xs text-white/40">Ask follows up...</span>
+                  <span className="text-xs text-white/40">Ask Ghostly...</span>
                   <ArrowRight className="w-4 h-4 text-primary" />
                 </div>
               </motion.div>
@@ -209,18 +187,18 @@ export function PerceptionLoop() {
 
           {/* Interactive Connectors (Visual Parity bridge) */}
           {activeStage >= 1 && (
-              <svg className="absolute inset-0 pointer-events-none z-0 overflow-visible" width="100%" height="100%">
-                <motion.path
-                  initial={{ pathLength: 0, opacity: 0 }}
-                  animate={{ pathLength: 1, opacity: 0.1 }}
-                  transition={{ duration: 1.5 }}
-                  d="M -150 150 Q -50 150 0 100"
-                  fill="none"
-                  stroke="var(--color-primary)"
-                  strokeWidth="2"
-                  strokeDasharray="4 4"
-                />
-              </svg>
+            <svg className="absolute inset-0 pointer-events-none z-0 overflow-visible" width="100%" height="100%">
+              <motion.path
+                initial={{ pathLength: 0, opacity: 0 }}
+                animate={{ pathLength: 1, opacity: 0.1 }}
+                transition={{ duration: 1.5 }}
+                d="M -150 150 Q -50 150 0 100"
+                fill="none"
+                stroke="var(--color-primary)"
+                strokeWidth="2"
+                strokeDasharray="4 4"
+              />
+            </svg>
           )}
         </div>
       </div>

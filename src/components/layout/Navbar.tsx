@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Ghost, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Logo } from "@/components/ui/Logo";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,11 +38,8 @@ export function Navbar() {
         )}
       >
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-all">
-             <Ghost className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
-          </div>
-          <span className="font-outfit font-bold text-2xl text-white tracking-tight">GhostLy</span>
+        <a href="#" className="hover:opacity-90 transition-opacity">
+          <Logo variant="full" />
         </a>
 
         {/* Desktop Nav */}
