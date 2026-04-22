@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "GhostLy | Context-Aware AI HUD",
     description: "AI that understands your screen. Experience the ghostly power of context-aware productivity on macOS.",
-    url: "https://ghostly.ai",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://ghostly.ai",
     siteName: "GhostLy",
     locale: "en_US",
     type: "website",

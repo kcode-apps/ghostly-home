@@ -39,9 +39,9 @@ export function PerceptionLoop() {
         ))}
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-8 items-stretch h-[450px]">
+      <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-stretch h-auto lg:h-[450px]">
         {/* Panel A: The Source (Perception Target) */}
-        <div className="relative glass rounded-[2.5rem] overflow-hidden group border-white/5 bg-black/20 p-8 flex flex-col">
+        <div className="relative glass rounded-[2.5rem] group border-white/5 bg-black/20 p-4 sm:p-8 flex flex-col">
           <div className="flex items-center gap-2 mb-6 border-b border-white/5 pb-4">
             <div className="flex gap-1.5">
               <div className="w-2.5 h-2.5 rounded-full bg-red-400/50" />
@@ -53,7 +53,7 @@ export function PerceptionLoop() {
             </div>
           </div>
 
-          <div className="flex-1 font-mono text-sm space-y-2 opacity-60 relative">
+          <div className="flex-1 font-mono text-[11px] sm:text-sm space-y-2 opacity-60 relative">
             <div className="flex gap-4">
               <span className="text-white/20">1</span>
               <span className="text-teal-400">pub async fn</span>
@@ -98,7 +98,7 @@ export function PerceptionLoop() {
         </div>
 
         {/* Panel B: The GhostLy HUD (Induction Output) */}
-        <div className="relative glass rounded-[2.5rem] bg-[#171717]/60 p-8 border-white/10 flex flex-col shadow-2xl">
+        <div className="relative glass rounded-[2.5rem] bg-[#171717]/60 p-4 sm:p-8 border-white/10 flex flex-col shadow-2xl">
           <AnimatePresence mode="wait">
             {activeStage === 0 && (
               <motion.div

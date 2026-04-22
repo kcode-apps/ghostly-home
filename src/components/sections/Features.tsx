@@ -5,8 +5,8 @@ import { Eye, ShieldCheck, Zap, Layers, Cpu, Globe, Sparkles } from "lucide-reac
 
 const features = [
   {
-    title: "Understands Your Screen",
-    description: "GhostLy automatically reads your active window and clipboard. No more copy-pasting—it has the full context of what you're working on.",
+    title: "Spectral Screen Perception",
+    description: "GhostLy endows your AI with eyes. By automatically harvesting textual and structural context from your active window and clipboard, it eliminates the need for manual copy-pasting.",
     icon: Layers,
     color: "text-emerald-400",
   },
@@ -17,8 +17,8 @@ const features = [
     color: "text-blue-400",
   },
   {
-    title: "All Models, One HUD",
-    description: "Stop switching tabs. Access Claude 3.5, GPT-4o, and Gemini 1.5 in a single, persistent display that lives on top of any app.",
+    title: "All Models, One UI",
+    description: "Access the premier Claude, GPT-4, and Gemini series in a single, persistent application. Toggle between providers instantly and leverage our autonomic failover Resilience Layer.",
     icon: Globe,
     color: "text-sky-400",
   },
@@ -41,8 +41,8 @@ const features = [
     color: "text-cyan-400",
   },
   {
-    title: "Custom AI Shortcuts",
-    description: "Automate your repetitive tasks. Save your most complex prompts once and trigger them instantly from any application with global shortcuts.",
+    title: "Self-Correcting Induction",
+    description: "Built for reliability. GhostLy automatically repairs malformed AI responses and schema errors through recursive induction, ensuring your workflows never break.",
     icon: Sparkles,
     color: "text-amber-400",
   },

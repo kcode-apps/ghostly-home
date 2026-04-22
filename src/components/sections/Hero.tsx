@@ -6,7 +6,7 @@ import { HUDMockup } from "@/components/ui/HUDMockup";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-hidden bg-background">
+    <section className="relative min-h-[110vh] sm:min-h-screen flex flex-col items-center justify-center pt-20 pb-32 sm:pb-0 overflow-hidden bg-background">
       {/* Background Glows */}
       <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-[120px] animate-pulse" />
       <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-teal-500/10 rounded-full blur-[120px] animate-pulse delay-700" />
@@ -18,10 +18,6 @@ export function Hero() {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center gap-4 mb-8"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest leading-none">
-            <Sparkles className="w-3 h-3" />
-            Your Private AI HUD
-          </div>
         </motion.div>
 
         <motion.h1
@@ -43,7 +39,7 @@ export function Hero() {
           className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed"
         >
           Access Gemini, Claude, and GPT-4o instantly, directly on top of your work. <br />
-          Stay in your flow with a non-interruptive HUD that understands your screen.
+          Stay in your flow with a friendly <strong>Ghost layer</strong> supporting your on screen tasks.
         </motion.p>
 
         <motion.div
