@@ -1,10 +1,14 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { HUDMockup } from "@/components/ui/HUDMockup";
+import { VideoModal } from "@/components/ui/VideoModal";
 
 export function Hero() {
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+
   return (
     <section className="relative min-h-[110vh] sm:min-h-screen flex flex-col items-center justify-center pt-20 pb-32 sm:pb-0 overflow-hidden bg-background">
       {/* Background Glows */}
@@ -55,7 +59,10 @@ export function Hero() {
             </span>
           </button>
 
-          <button className="w-full sm:w-auto px-8 py-4 bg-white/5 border border-white/10 hover:bg-white/10 text-white font-bold rounded-2xl transition-all active:scale-95">
+          <button 
+            onClick={() => setIsVideoModalOpen(true)}
+            className="w-full sm:w-auto px-8 py-4 bg-white/5 border border-white/10 hover:bg-white/10 text-white font-bold rounded-2xl transition-all active:scale-95"
+          >
             Watch Demo
           </button>
         </motion.div>
@@ -72,6 +79,11 @@ export function Hero() {
         {/* Subtle reflection under HUD */}
         <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-4/5 h-32 bg-primary/10 blur-[100px] rounded-[100%] opacity-50" />
       </div>
+
+      <VideoModal 
+        isOpen={isVideoModalOpen} 
+        onClose={() => setIsVideoModalOpen(false)} 
+      />
     </section>
   );
 }
