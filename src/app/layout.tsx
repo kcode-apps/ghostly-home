@@ -30,6 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <script src="https://app.lemonsqueezy.com/js/lemon.js" defer></script>
+      </head>
       <body className={`${inter.variable} ${outfit.variable} font-inter`}>
         {children}
       </body>

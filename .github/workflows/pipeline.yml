@@ -5,7 +5,7 @@ on:
     branches: [main, develop]
   pull_request:
     branches: [main, develop]
-  workflow_dispatch: # <--- Architect's Note: Enables the "Manual Trigger" button in GitHub
+  workflow_dispatch: # Enable the "Manual Trigger" button in GitHub
 
 jobs:
   validate:
@@ -36,7 +36,6 @@ jobs:
   release:
     name: Production Release
     needs: validate # <--- Never release if validation fails
-    # ARCHITECTURAL GUARD: 
     # Only run on 'main' AND only when manually triggered via 'workflow_dispatch'
     if: github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
