@@ -6,12 +6,13 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://ghostly.ai"),
   title: "GhostLy | Context-Aware AI HUD for macOS",
   description: "The next generation of AI productivity. A high-performance HUD that sees what you see, providing instant context-aware assistance without stealing focus.",
   openGraph: {
     title: "GhostLy | Context-Aware AI HUD",
     description: "AI that understands your screen. Experience the ghostly power of context-aware productivity on macOS.",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://ghostly.ai",
+    url: "/",
     siteName: "GhostLy",
     locale: "en_US",
     type: "website",
