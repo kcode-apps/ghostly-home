@@ -41,39 +41,53 @@ export function PerceptionLoop() {
 
       <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-stretch h-auto lg:h-[450px]">
         {/* Panel A: The Source (Perception Target) */}
-        <div className="relative glass rounded-[2.5rem] group border-white/5 bg-black/20 p-4 sm:p-8 flex flex-col">
+        <div className="relative glass rounded-[2.5rem] group border-white/5 bg-black/20 p-4 sm:p-8 flex flex-col overflow-hidden">
           <div className="flex items-center gap-2 mb-6 border-b border-white/5 pb-4">
             <div className="flex gap-1.5">
               <div className="w-2.5 h-2.5 rounded-full bg-red-400/50" />
               <div className="w-2.5 h-2.5 rounded-full bg-yellow-400/50" />
               <div className="w-2.5 h-2.5 rounded-full bg-green-400/50" />
             </div>
-            <div className="ml-4 px-3 py-1 rounded bg-white/5 text-[10px] font-mono text-white/30">
-              src/services/perception.rs
+            <div className="ml-4 px-3 py-1 rounded bg-white/5 text-[10px] font-mono text-white/30 uppercase tracking-widest">
+              market_analysis_q3.pdf
             </div>
           </div>
 
-          <div className="flex-1 font-mono text-[11px] sm:text-sm space-y-2 opacity-60 relative">
-            <div className="flex gap-4">
-              <span className="text-white/20">1</span>
-              <span className="text-teal-400">pub async fn</span>
-              <span className="text-white/80">harvest_context() &#123;</span>
-            </div>
-            <div className="flex gap-4">
-              <span className="text-white/20">2</span>
-              <span className="text-white/80 ml-4">let screen = Screen::capture().await?;</span>
-            </div>
-            <div className="flex gap-4">
-              <span className="text-white/20">3</span>
-              <span className="text-blue-400 ml-4">let induction = Induction::analyze(screen).await?;</span>
-            </div>
-            <div className="flex gap-4">
-              <span className="text-white/20">4</span>
-              <span className="text-white/80 ml-4">InductionResult::Success(induction)</span>
-            </div>
-            <div className="flex gap-4">
-              <span className="text-white/20">5</span>
-              <span className="text-white/80">&#125;</span>
+          <div className="flex-1 relative">
+            {/* Visual Graph Representation */}
+            <div className="h-full flex flex-col justify-end gap-2 pb-4">
+              <div className="flex items-end gap-2 h-32 px-4">
+                {[40, 70, 45, 90, 65, 80, 55].map((height, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ height: 0 }}
+                    animate={{ height: `${height}%` }}
+                    transition={{ delay: i * 0.1, duration: 1 }}
+                    className="flex-1 bg-gradient-to-t from-primary/20 to-primary/40 rounded-t-sm border-x border-t border-primary/20 relative group/bar"
+                  >
+                    <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[8px] font-mono text-primary opacity-0 group-hover/bar:opacity-100 transition-opacity">
+                      {height}%
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+              <div className="flex justify-between px-4 text-[8px] font-mono text-white/20">
+                <span>JUL</span>
+                <span>AUG</span>
+                <span>SEP</span>
+                <span>OCT</span>
+                <span>NOV</span>
+                <span>DEC</span>
+              </div>
+              
+              <div className="mt-8 space-y-3 px-4">
+                <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                  <div className="h-full w-3/4 bg-white/10" />
+                </div>
+                <div className="h-1.5 w-2/3 bg-white/5 rounded-full overflow-hidden">
+                  <div className="h-full w-1/2 bg-white/10" />
+                </div>
+              </div>
             </div>
 
             {/* Scanning Laser Line */}
@@ -85,11 +99,10 @@ export function PerceptionLoop() {
                 className="absolute inset-x-0 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent blur-sm z-20"
               />
             )}
-
           </div>
 
           <div className="mt-auto pt-6 border-t border-white/5 flex items-center justify-between text-[10px] uppercase tracking-widest font-bold text-white/20">
-            <span>PERCEPTION_TETHER_ACTIVE</span>
+            <span>VISUAL_CONTEXT_STREAMING</span>
             <div className="flex gap-2">
               <div className={`w-2 h-2 rounded-full ${activeStage === 1 ? "bg-primary animate-pulse" : "bg-white/10"}`} />
               <div className="w-2 h-2 rounded-full bg-white/10" />
@@ -139,7 +152,7 @@ export function PerceptionLoop() {
                   <div className="h-2 w-4/6 bg-white/10 rounded-full animate-pulse" />
                 </div>
                 <div className="mt-auto pb-4">
-                  <div className="text-[10px] font-mono text-primary/60 uppercase tracking-widest mb-2">Analyzing Structural Context...</div>
+                  <div className="text-[10px] font-mono text-primary/60 uppercase tracking-widest mb-2">Processing Visual Manifold...</div>
                   <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden">
                     <motion.div
                       initial={{ width: "0%" }}
@@ -166,15 +179,17 @@ export function PerceptionLoop() {
                 </div>
 
                 <div className="text-sm text-white/90 leading-relaxed font-outfit mb-6">
-                  &quot;I&apos;ve identified the <span className="text-primary font-bold">harvest_context</span> function. It performs an asynchronous screen capture and delegates the results to the induction tier for structural analysis.&quot;
+                  &quot;I&quot;ve analyzed the visible <span className="text-primary font-bold">Q3 Market Report</span>. Revenue peaked in October at <span className="text-teal-400">90%</span> of target capacity, with a minor corrective dip observed in November.&quot;
                 </div>
 
                 <div className="rounded-xl border border-white/10 bg-black/40 p-4 font-mono text-[10px] text-white/60 mb-8">
                   <div className="flex justify-between mb-2 pb-2 border-b border-white/5">
-                    <span className="text-primary/60 uppercase text-[8px]">Action Recommendation</span>
-                    <span className="text-white/20">copy</span>
+                    <span className="text-primary/60 uppercase text-[8px]">Multimodal Insight</span>
+                    <span className="text-white/20">summarize</span>
                   </div>
-                  Induction::analyze(screen).await?
+                  Target: Market_PDF.vision
+                  <br />
+                  Status: 3 anomalies detected
                 </div>
 
                 <div className="mt-auto px-4 py-3 rounded-xl border border-primary/20 bg-primary/5 flex items-center justify-between">

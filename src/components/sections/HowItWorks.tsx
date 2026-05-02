@@ -8,7 +8,7 @@ const steps = [
   {
     icon: MousePointer2,
     title: "Summon GhostLy",
-    description: "Use your global shortcut (Cmd + Shift + G) from any application. GhostLy appears instantly as a non-interruptive Heads Up Display (HUD).",
+    description: "Use your global shortcut from any application. GhostLy appears instantly as a non-interruptive Heads Up Display (HUD).",
     accent: "bg-teal-500",
   },
   {
