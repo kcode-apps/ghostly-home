@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
@@ -6,12 +7,12 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://ghostly.ai"),
-  title: "GhostLy | Context-Aware AI HUD for macOS",
-  description: "The next generation of AI productivity. A high-performance HUD that sees what you see, providing instant context-aware assistance without stealing focus.",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://ghostlydesktop.com"),
+  title: "GhostLy | Context-Aware AI Partner",
+  description: "The next generation of AI productivity. A high-performance heads up display that sees what you see, providing instant context-aware assistance without stealing focus.",
   openGraph: {
-    title: "GhostLy | Context-Aware AI HUD",
-    description: "AI that understands your screen. Experience the ghostly power of context-aware productivity on macOS.",
+    title: "GhostLy | Context-Aware AI Partner",
+    description: "AI that understands your screen. Experience the ghostly power of context-aware productivity on desktop.",
     url: "/",
     siteName: "GhostLy",
     locale: "en_US",
@@ -19,8 +20,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "GhostLy | Context-Aware AI HUD",
-    description: "The next generation of AI productivity for macOS.",
+    title: "GhostLy | Context-Aware AI Partner",
+    description: "The next generation of AI productivity for desktop.",
   },
 };
 
@@ -37,6 +38,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} ${outfit.variable} font-inter`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );

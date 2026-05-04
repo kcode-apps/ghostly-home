@@ -12,8 +12,8 @@ export function Hero() {
   return (
     <section className="relative min-h-[110vh] sm:min-h-screen flex flex-col items-center justify-center pt-20 pb-32 sm:pb-0 overflow-hidden bg-background">
       {/* Background Glows */}
-      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-[120px] animate-pulse" />
-      <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-teal-500/10 rounded-full blur-[120px] animate-pulse delay-700" />
+      {/* <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/10 rounded-full blur-[120px] animate-pulse" />
+      <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-teal-500/10 rounded-full blur-[120px] animate-pulse delay-700" /> */}
 
       <div className="container relative z-10 px-4 mx-auto text-center">
         <motion.div
