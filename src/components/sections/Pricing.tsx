@@ -50,10 +50,9 @@ export function Pricing() {
 
                   <div className="grid md:grid-cols-2 gap-x-8 gap-y-4 mb-12">
                      {[
-                        "Claude & GPT-4 Series",
-                        "Google Gemini Pro support",
+                        "Claude, GPT & Gemini unified",
                         "Your own API keys",
-                        "Lower AI token costs",
+                        "Lower AI costs",
                         "Hidden from Screen Share",
                         "Secure, Local Storage",
                         "Always Private"
@@ -66,22 +65,19 @@ export function Pricing() {
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-4 mt-auto">
-                     <a 
+                     <a
                         href={process.env.NEXT_PUBLIC_LS_CHECKOUT_URL || "#"}
                         className="lemonsqueezy-button flex-1 py-5 rounded-3xl font-bold bg-primary text-primary-foreground shadow-2xl hover:brightness-110 transition-all active:scale-95 flex items-center justify-center gap-2 text-lg"
                      >
                         Get Lifetime License
                         <Zap className="w-5 h-5 fill-current" />
                      </a>
-                     <button 
-                        onClick={() => {
-                          const el = document.getElementById('onboarding');
-                          if (el) el.scrollIntoView({ behavior: 'smooth' });
-                        }}
+                     <a
+                        href={process.env.NEXT_PUBLIC_DOWNLOAD_URL || "#"}
                         className="flex-1 py-5 rounded-3xl font-bold bg-white/5 text-white border border-white/10 hover:bg-white/10 transition-all active:scale-95 flex items-center justify-center gap-2 text-lg"
                      >
                         Try for Free
-                     </button>
+                     </a>
                   </div>
 
                   <p className="mt-6 text-center text-xs text-muted-foreground opacity-60">

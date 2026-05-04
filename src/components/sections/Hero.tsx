@@ -42,8 +42,8 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed"
         >
-          Access Gemini, Claude, and GPT-4o instantly, directly on top of your work. <br />
-          Stay in your flow with a friendly <strong>Ghost layer</strong> supporting your on screen tasks.
+          Access Gemini, Claude, and GPT instantly, directly on top of your work. <br />
+          Stay in your flow with a friendly <strong>Ghost layer</strong> supporting your on-screen tasks.
         </motion.p>
 
         <motion.div
@@ -52,14 +52,15 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <button className="group relative w-full sm:w-auto px-8 py-4 bg-primary text-primary-foreground font-bold rounded-2xl overflow-hidden active:scale-95 transition-all shadow-[0_0_40px_-10px_rgba(20,184,166,0.5)] hover:shadow-[0_0_60px_-10px_rgba(20,184,166,0.6)]">
-            <span className="relative z-10 flex items-center justify-center gap-2">
-              Get GhostLy Pro
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </span>
-          </button>
+          <a
+            href={process.env.NEXT_PUBLIC_LS_CHECKOUT_URL || "#"}
+            className="lemonsqueezy-button group relative w-full sm:w-auto px-8 py-4 bg-primary text-primary-foreground font-bold rounded-2xl overflow-hidden active:scale-95 transition-all shadow-[0_0_40px_-10px_rgba(20,184,166,0.5)] hover:shadow-[0_0_60px_-10px_rgba(20,184,166,0.6)] flex items-center justify-center gap-2"
+          >
+            Get GhostLy Pro
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </a>
 
-          <button 
+          <button
             onClick={() => setIsVideoModalOpen(true)}
             className="w-full sm:w-auto px-8 py-4 bg-white/5 border border-white/10 hover:bg-white/10 text-white font-bold rounded-2xl transition-all active:scale-95"
           >
@@ -80,9 +81,9 @@ export function Hero() {
         <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-4/5 h-32 bg-primary/10 blur-[100px] rounded-[100%] opacity-50" />
       </div>
 
-      <VideoModal 
-        isOpen={isVideoModalOpen} 
-        onClose={() => setIsVideoModalOpen(false)} 
+      <VideoModal
+        isOpen={isVideoModalOpen}
+        onClose={() => setIsVideoModalOpen(false)}
       />
     </section>
   );

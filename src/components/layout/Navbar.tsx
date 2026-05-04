@@ -53,9 +53,12 @@ export function Navbar() {
               {link.name}
             </a>
           ))}
-          <button className="px-5 py-2.5 bg-primary text-primary-foreground font-bold rounded-xl text-sm hover:brightness-110 transition-all active:scale-95">
+          <a 
+            href={process.env.NEXT_PUBLIC_DOWNLOAD_URL || "#"}
+            className="px-5 py-2.5 bg-primary text-primary-foreground font-bold rounded-xl text-sm hover:brightness-110 transition-all active:scale-95"
+          >
             Download App
-          </button>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -86,9 +89,12 @@ export function Navbar() {
                 {link.name}
               </a>
             ))}
-            <button className="w-full py-4 bg-primary text-primary-foreground font-bold rounded-2xl mt-4">
+            <a 
+              href={process.env.NEXT_PUBLIC_DOWNLOAD_URL || "#"}
+              className="w-full py-4 bg-primary text-primary-foreground font-bold rounded-2xl mt-4 text-center"
+            >
               Download App
-            </button>
+            </a>
           </motion.div>
         )}
       </AnimatePresence>
