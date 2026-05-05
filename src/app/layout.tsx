@@ -8,20 +8,31 @@ const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://ghostlydesktop.com"),
-  title: "GhostLy | Context-Aware AI Partner",
-  description: "The next generation of AI productivity. A high-performance heads up display that sees what you see, providing instant context-aware assistance without stealing focus.",
+  title: "GhostLy Desktop | Official Site | Screen Aware AI Partner",
+  description: "Experience the next generation of AI productivity on your desktop. GhostLy is a context-aware AI partner that unifies Claude, GPT & Gemini into a single spectral HUD.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+    ],
+  },
   openGraph: {
-    title: "GhostLy | Context-Aware AI Partner",
+    title: "GhostLy Desktop | Official Site",
     description: "AI that understands your screen. Experience the ghostly power of context-aware productivity on desktop.",
     url: "/",
     siteName: "GhostLy",
     locale: "en_US",
     type: "website",
+    images: ["/icon.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "GhostLy | Context-Aware AI Partner",
+    title: "GhostLy Desktop | Official Site",
     description: "The next generation of AI productivity for desktop.",
+    images: ["/icon.png"],
   },
 };
 
