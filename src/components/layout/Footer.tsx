@@ -1,4 +1,5 @@
 import { Logo } from "../ui/Logo";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -8,10 +9,11 @@ export function Footer() {
           <Logo size={32} />
           
           <nav className="flex gap-8 text-sm text-muted-foreground font-medium">
-            <a href="#features" className="hover:text-primary transition-colors">Features</a>
-            <a href="#how-it-works" className="hover:text-primary transition-colors">How it Works</a>
-            <a href="#pricing" className="hover:text-primary transition-colors">Pricing</a>
-            <a href="#" className="hover:text-white transition-colors">Privacy</a>
+            <Link href="/#features" className="hover:text-primary transition-colors">Features</Link>
+            <Link href="/#how-it-works" className="hover:text-primary transition-colors">How it Works</Link>
+            <Link href="/#pricing" className="hover:text-primary transition-colors">Pricing</Link>
+            <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
+            <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
           </nav>
 
           <p className="text-xs text-muted-foreground/50">
