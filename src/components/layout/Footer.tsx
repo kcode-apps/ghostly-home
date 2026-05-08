@@ -8,12 +8,13 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <Logo size={32} />
           
-          <nav className="flex gap-8 text-sm text-muted-foreground font-medium">
+          <nav className="flex gap-8 text-sm text-muted-foreground font-medium flex-wrap justify-center">
             <Link href="/#features" className="hover:text-primary transition-colors">Features</Link>
             <Link href="/#how-it-works" className="hover:text-primary transition-colors">How it Works</Link>
             <Link href="/#pricing" className="hover:text-primary transition-colors">Pricing</Link>
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
+            <Link href="/open-source" className="hover:text-white transition-colors">Open Source</Link>
           </nav>
 
           <p className="text-xs text-muted-foreground/50">
