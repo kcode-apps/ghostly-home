@@ -1,5 +1,3 @@
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,7 +8,6 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return (
     <main className="min-h-screen selection:bg-primary selection:text-white bg-background text-foreground">
-      <Navbar />
       <div className="container mx-auto px-4 py-24 md:py-32 max-w-3xl relative z-10">
         <div className="absolute inset-0 bg-glow opacity-10 pointer-events-none -z-10" />
 
@@ -63,7 +60,6 @@ export default function TermsPage() {
           </section>
         </div>
       </div>
-      <Footer />
     </main>
   );
 }
