@@ -1,30 +1,30 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Eye, ShieldCheck, Zap, Layers, Cpu, Globe, Sparkles } from "lucide-react";
+import { Eye, ShieldCheck, Zap, Layers, Cpu, Globe } from "lucide-react";
 
 const features = [
   {
-    title: "Spectral Screen Perception",
-    description: "GhostLy endows your AI with eyes. By automatically harvesting textual and structural context from your active window and clipboard, it eliminates the need for manual copy-pasting.",
+    title: "Screen-Aware Context",
+    description: "GhostLy gives your AI with eyes. By automatically harvesting textual and structural context from your active window and clipboard, it eliminates the need for manual screen shot sharing and copy-pasting.",
     icon: Layers,
     color: "text-emerald-400",
   },
   {
     title: "Bring Your Own Keys",
-    description: "Zero markup on AI tokens. Use your own Gemini, Claude, or OpenAI API keys and pay only for what you actually use. No monthly fees.",
+    description: "Zero markup on AI tokens. Use your own Gemini, Claude, or OpenAI API keys and pay only for what you actually use. No monthly fees. Not another subscription for you to keep track.",
     icon: Zap,
     color: "text-blue-400",
   },
   {
-    title: "All Models, One UI",
-    description: "Access the premier Claude, GPT-4, and Gemini series in a single, persistent application. Toggle between providers instantly and leverage our autonomic failover Resilience Layer.",
+    title: "All Models, One Interface",
+    description: "Access the premier Claude, GPT, and Gemini series in a single, persistent application. Toggle between providers instantly and leverage our autonomic failover Resilience Layer.",
     icon: Globe,
     color: "text-sky-400",
   },
   {
     title: "Built-In Privacy",
-    description: "Your data stays yours. GhostLy uses native macOS security to remain invisible to screen recordings and video calls automatically.",
+    description: "Your data stays yours. GhostLy can also remain invisible to screen recordings and video calls automatically.",
     icon: ShieldCheck,
     color: "text-indigo-400",
   },
@@ -35,17 +35,11 @@ const features = [
     color: "text-teal-400",
   },
   {
-    title: "Never In Your Way",
-    description: "The non-intrusive HUD is designed for zero context-switching. It’s always there when you need it and vanishes when you don’t.",
+    title: "Always Ready, Never In Your Way",
+    description: "The non-intrusive display is designed for zero context-switching. It’s always there when you need it and vanishes when you don’t.",
     icon: Cpu,
     color: "text-cyan-400",
-  },
-  {
-    title: "Self-Correcting Induction",
-    description: "Built for reliability. GhostLy automatically repairs malformed AI responses and schema errors through recursive induction, ensuring your workflows never break.",
-    icon: Sparkles,
-    color: "text-amber-400",
-  },
+  }
 ];
 
 export function Features() {

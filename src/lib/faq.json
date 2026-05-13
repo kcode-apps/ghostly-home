@@ -4,14 +4,14 @@
   "faqs": [
     {
       "id": "perception",
-      "question": "What is 'Screen aware perception'?",
+      "question": "What is 'Screen-aware perception'?",
       "answer": "GhostLy's Perception engine allows it to see and understand your active workspace in real-time. Whether you're debugging code, reviewing a document, or designing an interface, GhostLy captures the visual context locally to provide instant, precise assistance without you having to copy-paste.",
       "category": "Features"
     },
     {
       "id": "why",
       "question": "Why do I need GhostLy?",
-      "answer": "GhostLy reduces your conginitive exhaustion of switching between your standard AI utilities and copy pasting context. You can get AI suuport without on top of your work without app or tab switching and context copying.",
+      "answer": "GhostLy reduces the cognitive exhaustion of switching between standard AI utilities and copying context. You can get AI support directly on top of your work without app/tab switching or manual context copying.",
       "category": "Features"
     },
     {
@@ -23,13 +23,13 @@
     {
       "id": "providers",
       "question": "Which AI providers does GhostLy support?",
-      "answer": "GhostLy currently supports Anthropic Claude, OpenAI and Google Gemini. You can bring your own API keys.",
+      "answer": "GhostLy currently supports Anthropic Claude, OpenAI, and Google Gemini. You can bring your own API keys.",
       "category": "Models"
     },
     {
       "id": "context sources",
-      "question": "How does GhostLy provide context aware perception",
-      "answer": "GhostLy's Perception engine takes context from your screen AND clipboard. Anything on your active screen will taken as context (visual for graphical use cases or textual for text based and minimum tone spending use cases). LLM will use this context to answer your queries. You can switch off context awareness for simple queries which need no context.",
+      "question": "How does GhostLy provide context-aware perception?",
+      "answer": "GhostLy's Perception engine takes context from your screen AND clipboard. Anything on your active screen will be taken as context—visual for graphical use cases or textual for text-based tasks to minimize token spending. You can switch off context awareness for simple queries that require no context.",
       "category": "Features"
     },
     {
@@ -41,25 +41,25 @@
     {
       "id": "licensing",
       "question": "Is GhostLy available for commercial use?",
-      "answer": "Yes. Ghostly aims to reduce your subscription headache. You can use all features of GhostLy for unlimited time, by purchasing a single license for $20",
+      "answer": "Yes. GhostLy aims to reduce your subscription fatigue. You can use all features of GhostLy indefinitely by purchasing a single lifetime license for $20.",
       "category": "Billing"
     },
     {
       "id": "token optimization",
       "question": "How does GhostLy help me reduce token costs?",
-      "answer": "Copy pasting context or sending raw screenshots via your standard AI utilities can result in massive token costs. GhostLy, reduces your token cost, by pruning and minifying your raw contexts. This is applicable for both 'Textual' and 'Visual' modes.",
+      "answer": "Copy-pasting context or sending raw screenshots via standard AI utilities can result in massive token costs. GhostLy reduces your costs by pruning and compressing your raw context. This is applicable for both 'Textual' and 'Visual' modes.",
       "category": "Cost"
     },
     {
       "id": "windows release",
       "question": "Is GhostLy only available for Mac?",
-      "answer": "Currently, Yes. However, Windows and Linux released are already in progress and will be released within before August 2026",
+      "answer": "Currently, yes. However, Windows and Linux releases are already in development and are scheduled to launch before August 2026.",
       "category": "Future"
     },
     {
       "id": "updates",
-      "question": "What kind of after sales support can users expect?",
-      "answer": "GhostLy will send updates for any reported issues as patches. New features will be shipped out as minor release updates. (eg: v1.1.0)",
+      "question": "What kind of after-sales support can users expect?",
+      "answer": "GhostLy provides regular updates to address reported issues via patches. New features are shipped as minor release updates (e.g., v1.1.0).",
       "category": "Updates"
     }
   ]
