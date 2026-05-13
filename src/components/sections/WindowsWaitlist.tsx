@@ -1,13 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { Monitor, ArrowRight } from "lucide-react";
 
 export function WindowsWaitlist() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
-  
+
   const validateEmail = (email: string) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
@@ -64,7 +63,7 @@ export function WindowsWaitlist() {
                 disabled={status === "submitting" || status === "success"}
                 className="px-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder:text-neutral-600 outline-none focus:border-primary/50 transition-all min-w-[280px] disabled:opacity-50"
               />
-              <button 
+              <button
                 onClick={handleJoinWaitlist}
                 disabled={!validateEmail(email) || status === "submitting" || status === "success"}
                 className="px-8 py-4 bg-primary text-primary-foreground font-bold rounded-2xl hover:brightness-110 transition-all active:scale-95 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"

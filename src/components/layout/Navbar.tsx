@@ -23,6 +23,7 @@ export function Navbar() {
     { name: "Features", href: "/#features" },
     { name: "How it Works", href: "/#how-it-works" },
     { name: "Pricing", href: "/#pricing" },
+    { name: "FAQ", href: "/faq" },
   ];
 
   return (
@@ -46,13 +47,13 @@ export function Navbar() {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a 
+            <Link 
               key={link.name} 
               href={link.href} 
               className="text-sm font-medium text-neutral-400 hover:text-white transition-colors"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
           <a 
             href={process.env.NEXT_PUBLIC_DOWNLOAD_URL || "#"}
@@ -81,14 +82,14 @@ export function Navbar() {
             className="absolute top-24 left-4 right-4 glass rounded-3xl p-6 md:hidden flex flex-col gap-4 z-[99]"
           >
             {navLinks.map((link) => (
-              <a 
+              <Link 
                 key={link.name} 
                 href={link.href} 
                 className="text-lg font-medium text-white p-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
             <a 
               href={process.env.NEXT_PUBLIC_DOWNLOAD_URL || "#"}

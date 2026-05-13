@@ -1,0 +1,66 @@
+{
+  "title": "Frequently Asked Questions",
+  "description": "Everything you need to know about GhostLy Desktop - the screen-aware AI assistant.",
+  "faqs": [
+    {
+      "id": "perception",
+      "question": "What is 'Screen aware perception'?",
+      "answer": "GhostLy's Perception engine allows it to see and understand your active workspace in real-time. Whether you're debugging code, reviewing a document, or designing an interface, GhostLy captures the visual context locally to provide instant, precise assistance without you having to copy-paste.",
+      "category": "Features"
+    },
+    {
+      "id": "why",
+      "question": "Why do I need GhostLy?",
+      "answer": "GhostLy reduces your conginitive exhaustion of switching between your standard AI utilities and copy pasting context. You can get AI suuport without on top of your work without app or tab switching and context copying.",
+      "category": "Features"
+    },
+    {
+      "id": "privacy",
+      "question": "Is my screen data private?",
+      "answer": "Absolutely. GhostLy follows a local-first philosophy. Perception data is processed on your device to extract relevant context before being sent to your chosen AI provider (Claude, OpenAI, or Gemini) over encrypted channels. We do not store your screenshots or data on our servers.",
+      "category": "Privacy"
+    },
+    {
+      "id": "providers",
+      "question": "Which AI providers does GhostLy support?",
+      "answer": "GhostLy currently supports Anthropic Claude, OpenAI and Google Gemini. You can bring your own API keys.",
+      "category": "Models"
+    },
+    {
+      "id": "context sources",
+      "question": "How does GhostLy provide context aware perception",
+      "answer": "GhostLy's Perception engine takes context from your screen AND clipboard. Anything on your active screen will taken as context (visual for graphical use cases or textual for text based and minimum tone spending use cases). LLM will use this context to answer your queries. You can switch off context awareness for simple queries which need no context.",
+      "category": "Features"
+    },
+    {
+      "id": "shortcuts",
+      "question": "Can I customize the shortcuts?",
+      "answer": "Yes. GhostLy is designed to be invisible until needed. You can customize the 'Summon' shortcut (defaulting to Cmd+Shift+G) and the 'Quick Prompt' shortcuts in the app settings.",
+      "category": "Customization"
+    },
+    {
+      "id": "licensing",
+      "question": "Is GhostLy available for commercial use?",
+      "answer": "Yes. Ghostly aims to reduce your subscription headache. You can use all features of GhostLy for unlimited time, by purchasing a single license for $20",
+      "category": "Billing"
+    },
+    {
+      "id": "token optimization",
+      "question": "How does GhostLy help me reduce token costs?",
+      "answer": "Copy pasting context or sending raw screenshots via your standard AI utilities can result in massive token costs. GhostLy, reduces your token cost, by pruning and minifying your raw contexts. This is applicable for both 'Textual' and 'Visual' modes.",
+      "category": "Cost"
+    },
+    {
+      "id": "windows release",
+      "question": "Is GhostLy only available for Mac?",
+      "answer": "Currently, Yes. However, Windows and Linux released are already in progress and will be released within before August 2026",
+      "category": "Future"
+    },
+    {
+      "id": "updates",
+      "question": "What kind of after sales support can users expect?",
+      "answer": "GhostLy will send updates for any reported issues as patches. New features will be shipped out as minor release updates. (eg: v1.1.0)",
+      "category": "Updates"
+    }
+  ]
+}
