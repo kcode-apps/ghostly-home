@@ -16,6 +16,7 @@ export function Footer() {
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
             <Link href="/open-source" className="hover:text-white transition-colors">Open Source</Link>
+            <Link href="https://github.com/kcode-apps/ghostly-community" target="_blank" className="hover:text-white transition-colors">Community</Link>
           </nav>
 
           <p className="text-xs text-muted-foreground/50">

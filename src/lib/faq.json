@@ -61,6 +61,12 @@
       "question": "What kind of after-sales support can users expect?",
       "answer": "GhostLy provides regular updates to address reported issues via patches. New features are shipped as minor release updates (e.g., v1.1.0).",
       "category": "Updates"
+    },
+    {
+      "id": "feedback",
+      "question": "How can I report a bug or suggest a feature?",
+      "answer": "We love hearing from our users! You can report bugs, suggest new features, or join the discussion in our official Community Feedback repository at https://github.com/kcode-apps/ghostly-community.",
+      "category": "Support"
     }
   ]
 }
