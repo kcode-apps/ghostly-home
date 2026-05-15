@@ -37,6 +37,9 @@ export const metadata: Metadata = {
     description: "The next generation of AI productivity for desktop.",
     images: ["/icon.png"],
   },
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({

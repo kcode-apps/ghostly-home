@@ -11,6 +11,9 @@ export const generateMetadata = (): Metadata => {
       title: "Frequently Asked Questions | GhostLy",
       description: faqData.description,
     },
+    alternates: {
+      canonical: "/faq",
+    },
   };
 };
 
