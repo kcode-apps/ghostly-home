@@ -35,7 +35,7 @@
     {
       "id": "shortcuts",
       "question": "Can I customize the shortcuts?",
-      "answer": "Yes. GhostLy is designed to be invisible until needed. You can customize the 'Summon' shortcut (defaulting to Cmd+Shift+G) and the 'Quick Prompt' shortcuts in the app settings.",
+      "answer": "Yes. GhostLy is designed to be invisible until needed. You can customize the 'Summon' shortcut (defaulting to Cmd+G) and the 'Quick Prompt' shortcuts in the app settings.",
       "category": "Customization"
     },
     {
