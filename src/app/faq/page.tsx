@@ -5,7 +5,7 @@ import faqData from "@/lib/faq.json";
 
 export const generateMetadata = (): Metadata => {
   return {
-    title: `FAQ | GhostLy Desktop - Screen-Aware AI`,
+    title: `FAQ | GhostLy Desktop`,
     description: faqData.description,
     openGraph: {
       title: "Frequently Asked Questions | GhostLy",

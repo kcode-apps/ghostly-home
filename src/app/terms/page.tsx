@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms of Service | GhostLy",
-  description: "Terms and conditions for using the GhostLy AI HUD.",
+  description: "Terms and conditions for using GhostLy.",
 };
 
 export default function TermsPage() {

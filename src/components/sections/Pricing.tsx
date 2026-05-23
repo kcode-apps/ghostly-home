@@ -20,10 +20,10 @@ export function Pricing() {
                   className="font-outfit text-4xl md:text-5xl font-bold text-white mb-6"
                >
                   One License. <br />
-                  <span className="text-primary">Lifetime Context.</span>
+                  <span className="text-primary">Lifetime Access.</span>
                </motion.h2>
                <p className="text-muted-foreground max-w-xl mx-auto">
-                  No monthly fees. No &quot;unlimited&quot; traps. Just a private, context-aware bridge between your screen and your AI keys.
+                  Pay $20 once for GhostLy. Connect your own AI provider accounts. No monthly GhostLy fees.
                </p>
             </div>
 
@@ -51,10 +51,10 @@ export function Pricing() {
                   <div className="grid md:grid-cols-2 gap-x-8 gap-y-4 mb-12">
                      {[
                         "Claude, GPT & Gemini unified",
-                        "Your own API keys",
-                        "Lower AI costs",
+                        "Your own AI accounts",
+                        "Lower AI usage costs",
                         "Hidden from Screen Share",
-                        "Secure, Local Storage",
+                        "Settings saved on your device",
                         "Always Private"
                      ].map(f => (
                         <div key={f} className="flex items-center gap-3 text-sm text-neutral-200">
@@ -81,7 +81,7 @@ export function Pricing() {
                   </div>
 
                   <p className="mt-6 text-center text-xs text-muted-foreground opacity-60">
-                     Works with your own Gemini, Claude, or OpenAI API keys.
+                     Works with your own Claude, GPT, or Gemini accounts.
                   </p>
                </motion.div>
             </div>
@@ -89,7 +89,7 @@ export function Pricing() {
             <div className="mt-20 text-center max-w-2xl mx-auto p-6 rounded-3xl border border-white/5 bg-white/[0.02]">
                <h4 className="text-white font-bold mb-2">Total Control, Zero Fees</h4>
                <p className="text-muted-foreground text-sm">
-                  Standard AI apps charge $20/month for access. <strong>GhostLy doesn&apos;t.</strong> By using your own API keys, you pay GhostLy once and access raw intelligence for just the pennies you actually use. <strong>No middleman markups. No monthly subscriptions.</strong>
+                  Standard AI apps charge $20/month for access. <strong>GhostLy doesn&apos;t.</strong> You pay GhostLy once, then pay your AI provider only for what you use. <strong>No middleman markups. No GhostLy subscription.</strong>
                </p>
             </div>
          </div>

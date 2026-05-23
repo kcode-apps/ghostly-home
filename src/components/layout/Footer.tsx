@@ -20,7 +20,7 @@ export function Footer() {
           </nav>
 
           <p className="text-xs text-muted-foreground/50">
-            © 2026 GhostLy AI. Built for the future of focus.
+            © 2026 GhostLy AI. AI that stays out of your way.
           </p>
         </div>
       </div>

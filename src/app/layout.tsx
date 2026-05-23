@@ -11,8 +11,8 @@ const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://ghostlydesktop.com"),
-  title: "GhostLy Desktop | Official Site | Screen Aware AI Partner",
-  description: "Experience the next generation of AI productivity on your desktop. GhostLy is a context-aware AI partner that unifies Claude, GPT & Gemini into a single spectral HUD.",
+  title: "GhostLy Desktop | AI Assistant That Reads Your Screen",
+  description: "GhostLy connects Claude, GPT, and Gemini to whatever is on your screen. No copy-pasting, no tab switching. Ask questions right where you work.",
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "GhostLy Desktop | Official Site",
-    description: "AI that understands your screen. Experience the ghostly power of context-aware productivity on desktop.",
+    description: "AI that understands your screen. One app for Claude, GPT, and Gemini on your desktop.",
     url: "/",
     siteName: "GhostLy",
     locale: "en_US",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "GhostLy Desktop | Official Site",
-    description: "The next generation of AI productivity for desktop.",
+    description: "GhostLy reads your screen and connects Claude, GPT, and Gemini in one desktop app.",
     images: ["/icon.png"],
   },
   alternates: {

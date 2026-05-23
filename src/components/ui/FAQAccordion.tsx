@@ -9,6 +9,8 @@ interface FAQItem {
   question: string;
   answer: string;
   category: string;
+  linkText?: string;
+  linkHref?: string;
 }
 
 interface FAQAccordionProps {
@@ -20,6 +22,29 @@ export const FAQAccordion: React.FC<FAQAccordionProps> = ({ items }) => {
 
   const toggle = (id: string) => {
     setOpenId(openId === id ? null : id);
+  };
+
+  const renderAnswer = (item: FAQItem) => {
+    if (!item.linkText || !item.linkHref || !item.answer.includes(item.linkText)) {
+      return item.answer;
+    }
+
+    const [before, after] = item.answer.split(item.linkText);
+
+    return (
+      <>
+        {before}
+        <a
+          href={item.linkHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+        >
+          {item.linkText}
+        </a>
+        {after}
+      </>
+    );
   };
 
   return (
@@ -54,7 +79,7 @@ export const FAQAccordion: React.FC<FAQAccordionProps> = ({ items }) => {
                 transition={{ duration: 0.3, ease: "easeInOut" }}
               >
                 <div className="px-6 pb-6 text-muted-foreground leading-relaxed">
-                  {item.answer}
+                  {renderAnswer(item)}
                 </div>
               </motion.div>
             )}

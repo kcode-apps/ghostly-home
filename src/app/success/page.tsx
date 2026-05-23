@@ -97,7 +97,7 @@ function SuccessContent() {
 
           <div className="space-y-6">
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Now that you have your license key, open the GhostLy application on your desktop to activate your Pro workspace.
+              Now that you have your license key, open the GhostLy application on your desktop to activate your Pro license.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

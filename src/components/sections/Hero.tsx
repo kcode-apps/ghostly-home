@@ -30,7 +30,7 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="font-outfit text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-6"
         >
-          Desktop Intelligence. <br />
+          Desktop AI. <br />
           <span className="bg-gradient-to-r from-primary via-teal-400 to-blue-500 bg-clip-text text-transparent">
             Supercharged
           </span>
@@ -42,8 +42,8 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed"
         >
-          Access Gemini, Claude, and GPT instantly, directly on top of your work. <br />
-          Stay in your flow with a friendly <strong>Ghost layer</strong> supporting your on-screen tasks.
+          An AI assistant that reads your screen, right where you work. <br />
+          Use Claude, GPT, and Gemini without copy-pasting or switching apps.
         </motion.p>
 
         <motion.div

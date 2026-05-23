@@ -1,41 +1,47 @@
 {
   "title": "Frequently Asked Questions",
-  "description": "Everything you need to know about GhostLy Desktop - the screen-aware AI assistant.",
+  "description": "Common questions about GhostLy, the AI assistant that reads your screen.",
   "faqs": [
     {
       "id": "perception",
-      "question": "What is 'Screen-aware perception'?",
-      "answer": "GhostLy's Perception engine allows it to see and understand your active workspace in real-time. Whether you're debugging code, reviewing a document, or designing an interface, GhostLy captures the visual context locally to provide instant, precise assistance without you having to copy-paste.",
+      "question": "How does GhostLy read my screen?",
+      "answer": "GhostLy looks at what's on your active window and understands it in real time. Whether you're coding, reading a document, or reviewing a design, it picks up the details locally, so you don't have to copy-paste or take screenshots.",
       "category": "Features"
     },
     {
       "id": "why",
       "question": "Why do I need GhostLy?",
-      "answer": "GhostLy reduces the cognitive exhaustion of switching between standard AI utilities and copying context. You can get AI support directly on top of your work without app/tab switching or manual context copying.",
+      "answer": "Most AI tools live in a browser tab. You copy text, switch apps, and lose your place. GhostLy sits on top of your work and answers based on what's actually in front of you.",
       "category": "Features"
     },
     {
       "id": "privacy",
       "question": "Is my screen data private?",
-      "answer": "Absolutely. GhostLy follows a local-first philosophy. Perception data is processed on your device to extract relevant context before being sent to your chosen AI provider (Claude, OpenAI, or Gemini) over encrypted channels. We do not store your screenshots or data on our servers.",
+      "answer": "Yes. GhostLy processes what it reads on your Mac before anything is sent to AI. Screen data is not stored on our servers. When you ask a question, your prompt goes directly to the AI provider you choose (Claude, OpenAI, or Gemini) over encrypted connections.",
+      "category": "Privacy"
+    },
+    {
+      "id": "pii-redaction-beta",
+      "question": "Does GhostLy hide personal information?",
+      "answer": "Yes, optionally, and it's on by default. Our beta privacy feature hides personal details on your Mac before anything is sent to AI. It's not perfect yet, so always double-check what you're sharing.",
       "category": "Privacy"
     },
     {
       "id": "providers",
       "question": "Which AI providers does GhostLy support?",
-      "answer": "GhostLy currently supports Anthropic Claude, OpenAI, and Google Gemini. You can bring your own API keys.",
+      "answer": "GhostLy works with Anthropic Claude, OpenAI, and Google Gemini. Connect your own accounts and pay the provider directly for usage.",
       "category": "Models"
     },
     {
       "id": "context sources",
-      "question": "How does GhostLy provide context-aware perception?",
-      "answer": "GhostLy's Perception engine takes context from your screen AND clipboard. Anything on your active screen will be taken as context—visual for graphical use cases or textual for text-based tasks to minimize token spending. You can switch off context awareness for simple queries that require no context.",
+      "question": "What does GhostLy use as context?",
+      "answer": "GhostLy reads your active screen and clipboard. For text-heavy work it focuses on the words; for visual work it captures what you see. You can turn screen reading off in Settings when you just need a simple chat.",
       "category": "Features"
     },
     {
       "id": "shortcuts",
       "question": "Can I customize the shortcuts?",
-      "answer": "Yes. GhostLy is designed to be invisible until needed. You can customize the 'Summon' shortcut (defaulting to Cmd+G) and the 'Quick Prompt' shortcuts in the app settings.",
+      "answer": "Yes. You can change the shortcut to open GhostLy (default ⌘+G) and other quick-action shortcuts in Settings.",
       "category": "Customization"
     },
     {
@@ -46,8 +52,8 @@
     },
     {
       "id": "token optimization",
-      "question": "How does GhostLy help me reduce token costs?",
-      "answer": "Copy-pasting context or sending raw screenshots via standard AI utilities can result in massive token costs. GhostLy reduces your costs by pruning and compressing your raw context. This is applicable for both 'Textual' and 'Visual' modes.",
+      "question": "How does GhostLy help me spend less on AI?",
+      "answer": "Pasting huge blocks of text or uploading full screenshots can get expensive fast. GhostLy sends only what's relevant from your screen, which typically uses less of your AI provider's usage.",
       "category": "Cost"
     },
     {
@@ -59,13 +65,15 @@
     {
       "id": "updates",
       "question": "What kind of after-sales support can users expect?",
-      "answer": "GhostLy provides regular updates to address reported issues via patches. New features are shipped as minor release updates (e.g., v1.1.0).",
+      "answer": "We ship bug fixes and improvements regularly. New features arrive in minor updates (for example, v1.1.0).",
       "category": "Updates"
     },
     {
       "id": "feedback",
       "question": "How can I report a bug or suggest a feature?",
-      "answer": "We love hearing from our users! You can report bugs, suggest new features, or join the discussion in our official Community Feedback repository at https://github.com/kcode-apps/ghostly-community.",
+      "answer": "We'd love to hear from you. Report bugs or suggest features in our community repository.",
+      "linkText": "repository",
+      "linkHref": "https://github.com/kcode-apps/ghostly-community",
       "category": "Support"
     }
   ]

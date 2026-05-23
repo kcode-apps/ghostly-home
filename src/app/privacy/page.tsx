@@ -18,7 +18,7 @@ export default function PrivacyPage() {
           <section className="space-y-4">
             <h2 className="text-2xl font-bold text-white font-outfit">1. Introduction</h2>
             <p>
-              GhostLy (&quot;we,&quot; &quot;our,&quot; or &quot;the Software&quot;) is designed with a privacy-first architecture. This policy explains how we handle your information when you use the GhostLy HUD.
+              GhostLy (&quot;we,&quot; &quot;our,&quot; or &quot;the Software&quot;) is designed with a privacy-first architecture. This policy explains how we handle your information when you use the GhostLy desktop app.
             </p>
           </section>
 
@@ -26,7 +26,7 @@ export default function PrivacyPage() {
             <h2 className="text-2xl font-bold text-white font-outfit">2. Information We Never Collect</h2>
             <ul className="list-disc pl-6 space-y-2 marker:text-primary">
               <li><strong>No Analytics</strong>: We do not use tracking scripts, telemetry, or analytics cookies inside the application.</li>
-              <li><strong>No Personal Data Harvesting</strong>: We do not collect your name, location, or browsing history.</li>
+              <li><strong>No Personal Data Collection</strong>: We do not collect your name, location, or browsing history.</li>
             </ul>
           </section>
 
@@ -40,7 +40,19 @@ export default function PrivacyPage() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-2xl font-bold text-white font-outfit">4. Third-Party Services</h2>
+            <h2 className="text-2xl font-bold text-white font-outfit">
+              4. Sensitive Data Redaction <span className="text-sm font-semibold uppercase tracking-wide text-violet-300">(Beta)</span>
+            </h2>
+            <p>
+              GhostLy includes a <strong>Sensitive Data Redaction</strong> feature, currently in <strong>beta</strong>. It tries to hide personal details on your device, such as emails, phone numbers, and payment info, before anything is sent to an AI provider.
+            </p>
+            <p>
+              <strong>Important:</strong> Because this feature is in beta, it may not catch everything. You are still responsible for what you choose to share with AI providers.
+            </p>
+          </section>
+
+          <section className="space-y-4">
+            <h2 className="text-2xl font-bold text-white font-outfit">5. Third-Party Services</h2>
             <p>By using remote AI models, you are subject to the privacy policies of the providers you configure:</p>
             <ul className="list-disc pl-6 space-y-2 marker:text-primary">
               <li><a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">OpenAI Privacy Policy</a></li>

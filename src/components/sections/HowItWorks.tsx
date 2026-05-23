@@ -7,20 +7,20 @@ import { PerceptionLoop } from "@/components/ui/PerceptionLoop";
 const steps = [
   {
     icon: MousePointer2,
-    title: "Summon GhostLy",
-    description: "Use your global shortcut from any application. GhostLy appears instantly as a non-interruptive Heads Up Display (HUD).",
+    title: "Open GhostLy",
+    description: "Press your shortcut from any app. GhostLy appears right over whatever you're working on.",
     accent: "bg-teal-500",
   },
   {
     icon: ScanSearch,
-    title: "Instant Perception",
-    description: "GhostLy captures the current screen context. No need to select text or take screenshots—it understands the entire window state.",
+    title: "Read Your Screen",
+    description: "GhostLy looks at what's on your screen. No copying text, no screenshots.",
     accent: "bg-blue-500",
   },
   {
     icon: MessageSquareQuote,
-    title: "Ghostly Assistance",
-    description: "Ask anything. GhostLy provides precise, context-aware answers directly on top of your work. It's like your screen has a brain.",
+    title: "Get Your Answer",
+    description: "Ask anything. GhostLy replies based on what's actually in front of you.",
     accent: "bg-indigo-500",
   },
 ];
@@ -42,7 +42,7 @@ export function HowItWorks() {
             How it <span className="text-teal-400">Works.</span>
           </motion.h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Power at your fingertips. 3 simple steps to integrate GhostLy into your workflow.
+            Three simple steps to get started.
           </p>
         </div>
 

@@ -50,7 +50,7 @@ export function WindowsWaitlist() {
                 Not a Mac user?
               </h2>
               <p className="text-muted-foreground">
-                We&apos;re building GhostLy for Windows. Join the exclusive waitlist to be synchronized first.
+                We&apos;re building GhostLy for Windows. Join the waitlist to be notified first when it launches.
               </p>
             </div>
 

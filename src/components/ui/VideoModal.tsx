@@ -101,9 +101,9 @@ export function VideoModal({ isOpen, onClose }: VideoModalProps) {
                   <div className="w-20 h-20 rounded-3xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
                     <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin" />
                   </div>
-                  <h4 className="text-xl font-bold text-white mb-2 font-outfit">Inducting Demo Manifest...</h4>
+                  <h4 className="text-xl font-bold text-white mb-2 font-outfit">Demo video unavailable</h4>
                   <p className="text-muted-foreground text-sm max-w-xs">
-                    Please configure NEXT_PUBLIC_DEMO_VIDEO_URL in your environment manifold to activate this portal.
+                    We&apos;re preparing a walkthrough. Check back soon.
                   </p>
                 </div>
               )}
