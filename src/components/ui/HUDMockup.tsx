@@ -61,7 +61,22 @@ function headerStatus(phase: Phase): string | null {
   }
 }
 
+function useIsDesktop() {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia("(min-width: 640px)");
+    const sync = () => setIsDesktop(media.matches);
+    sync();
+    media.addEventListener("change", sync);
+    return () => media.removeEventListener("change", sync);
+  }, []);
+
+  return isDesktop;
+}
+
 export function HUDMockup() {
+  const isDesktop = useIsDesktop();
   const [phase, setPhase] = useState<Phase>("idle");
   const answerText = useTypewriter(ANSWER, phase === "typing" || phase === "done");
   const isLoading = phase === "gathering" || phase === "connecting" || phase === "typing";
@@ -78,37 +93,45 @@ export function HUDMockup() {
   }, [phase]);
 
   return (
-    <div className="relative group perspective-1000">
+    <div className={`relative group ${isDesktop ? "sm:perspective-[1000px]" : ""}`}>
       <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-blue-500/30 rounded-[2.5rem] blur-2xl opacity-50 group-hover:opacity-75 transition duration-1000 group-hover:duration-200" />
 
       <motion.div
-        initial={{ opacity: 0, scale: 0.9, rotateX: 2, rotateY: -2 }}
-        whileInView={{ opacity: 1, scale: 1, rotateX: 0, rotateY: 0 }}
-        whileHover={{ rotateX: 2, rotateY: -2, y: -5 }}
+        initial={
+          isDesktop
+            ? { opacity: 0, scale: 0.9, rotateX: 2, rotateY: -2 }
+            : { opacity: 0, y: 16 }
+        }
+        whileInView={
+          isDesktop
+            ? { opacity: 1, scale: 1, rotateX: 0, rotateY: 0 }
+            : { opacity: 1, y: 0 }
+        }
+        whileHover={isDesktop ? { rotateX: 2, rotateY: -2, y: -5 } : undefined}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative w-full max-w-[600px] mx-auto aspect-video sm:aspect-[16/10] bg-[#1a1a1a]/80 backdrop-blur-3xl rounded-[2rem] border border-white/10 shadow-2xl flex flex-col p-4 sm:p-6"
+        className="relative w-full max-w-[600px] mx-auto aspect-[4/5] sm:aspect-[16/10] bg-[#1a1a1a]/80 backdrop-blur-3xl rounded-[2rem] border border-white/10 shadow-2xl flex flex-col p-3 sm:p-6"
       >
         {/* Header: matches real HUD (logo, title, status line) */}
-        <div className="flex items-start justify-between mb-4 pb-2 border-b border-white/5">
-          <div className="flex flex-col select-none">
+        <div className="flex items-start justify-between mb-3 sm:mb-4 pb-2 border-b border-white/5">
+          <div className="flex flex-col select-none min-w-0">
             <div className="flex items-center gap-2 sm:gap-3">
-              <Logo variant="mark-only" size={28} className="sm:size-8" />
-              <span className="font-outfit text-lg sm:text-xl font-bold tracking-tight bg-gradient-to-r from-primary to-teal-400 bg-clip-text text-transparent">
+              <Logo variant="mark-only" size={isDesktop ? 32 : 24} />
+              <span className="font-outfit text-base sm:text-xl font-bold tracking-tight bg-gradient-to-r from-primary to-teal-400 bg-clip-text text-transparent">
                 GhostLy
               </span>
             </div>
             {status && (
-              <span className="mt-1 text-[10px] text-cyan-400/80 font-mono tracking-tight animate-pulse">
+              <span className="mt-1 text-[10px] text-cyan-400/80 font-mono tracking-tight animate-pulse truncate">
                 {status}
               </span>
             )}
           </div>
 
-          <div className="flex items-center gap-1 sm:gap-2">
+          <div className="hidden sm:flex items-center gap-2 shrink-0">
             {[Copy, Sun, Settings, Pin].map((Icon, i) => (
               <div
                 key={i}
-                className="p-1.5 sm:p-2 rounded-lg bg-white/5 border border-white/5 text-white/40"
+                className="p-2 rounded-lg bg-white/5 border border-white/5 text-white/40"
               >
                 <Icon className="w-4 h-4" />
               </div>
@@ -117,7 +140,7 @@ export function HUDMockup() {
         </div>
 
         {/* Response area: query anchor + answer, no screen preview inside HUD */}
-        <div className="flex-1 rounded-2xl bg-black/20 border border-white/5 p-4 sm:p-5 mb-4 font-sans text-[13px] sm:text-[15px] leading-relaxed text-slate-200 min-h-0 overflow-hidden flex flex-col">
+        <div className="flex-1 rounded-2xl bg-black/20 border border-white/5 p-3 sm:p-5 mb-3 sm:mb-4 font-sans text-[13px] sm:text-[15px] leading-relaxed text-slate-200 min-h-0 overflow-hidden flex flex-col">
           {showQuery && (
             <motion.div
               initial={{ opacity: 0, y: -4 }}
@@ -165,24 +188,24 @@ export function HUDMockup() {
 
         {/* Query input: matches real HUD */}
         <div className="shrink-0">
-          <div className="text-[10px] font-bold uppercase tracking-widest text-white/40 px-2 mb-2">
+          <div className="hidden sm:block text-[10px] font-bold uppercase tracking-widest text-white/40 px-2 mb-2">
             System Default
           </div>
           <div
-            className={`w-full bg-white/5 border border-white/10 rounded-2xl px-4 sm:px-5 py-3 text-white/40 font-medium flex items-center justify-between transition-colors duration-500 ${
+            className={`w-full bg-white/5 border border-white/10 rounded-2xl px-3 sm:px-5 py-2.5 sm:py-3 text-white/40 font-medium flex items-center justify-between transition-colors duration-500 ${
               isLoading ? "opacity-60" : "group-hover:border-primary/30"
             }`}
           >
-            <span className="text-sm truncate pr-2">
+            <span className="text-xs sm:text-sm truncate pr-2">
               {isLoading ? "Generating response..." : "Ask GhostLy..."}
             </span>
-            <div className="w-8 h-8 rounded-xl bg-primary/20 border border-primary/30 flex items-center justify-center shrink-0">
+            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-primary/20 border border-primary/30 flex items-center justify-center shrink-0">
               <div className={`w-2 h-2 rounded-full bg-primary ${isLoading ? "animate-pulse" : ""}`} />
             </div>
           </div>
         </div>
 
-        <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-20 group-hover:animate-shine" />
+        <div className="absolute top-0 -inset-full h-full w-1/2 z-5 hidden sm:block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-20 group-hover:animate-shine" />
       </motion.div>
     </div>
   );
