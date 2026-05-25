@@ -12,13 +12,13 @@ export default function TermsPage() {
         <div className="absolute inset-0 bg-glow opacity-10 pointer-events-none -z-10" />
 
         <h1 className="text-4xl md:text-5xl font-outfit font-bold tracking-tight mb-4">Terms of Service</h1>
-        <p className="text-muted-foreground mb-12">Last Updated: May 7, 2026</p>
+        <p className="text-muted-foreground mb-12">Last Updated: May 23, 2026</p>
 
         <div className="space-y-10 text-white/80 leading-relaxed font-inter">
           <section className="space-y-4">
             <h2 className="text-2xl font-bold text-white font-outfit">1. License Grant</h2>
             <p>
-              GhostLy is a commercial software product. Upon purchase, we grant you a non-exclusive, non-transferable license to use the Software on a limited number of devices as specified in your purchase plan.
+              GhostLy is a commercial software product. Upon purchase, we grant you a non-exclusive, non-transferable license to use the Software on up to the number of device activations included with your license, as shown at checkout and in your Lemon Squeezy receipt.
             </p>
           </section>
 
@@ -26,7 +26,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-bold text-white font-outfit">2. Acceptable Use</h2>
             <p>You agree not to:</p>
             <ul className="list-disc pl-6 space-y-2 marker:text-primary">
-              <li>Decompile, reverse-engineer, or attempt to extract the source code of the Software.</li>
+              <li>Decompile, reverse engineer, or attempt to extract the source code of the Software.</li>
               <li>Use the Software to generate illegal, harmful, or abusive content through AI providers.</li>
             </ul>
           </section>

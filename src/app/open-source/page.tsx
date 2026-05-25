@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Open Source Licenses | GhostLy",
-  description: "A list of third-party open-source libraries used to build GhostLy.",
+  description: "Third party open source libraries used to build GhostLy.",
 };
 
 export default function OpenSourcePage() {
@@ -16,8 +16,8 @@ export default function OpenSourcePage() {
         
         <h1 className="text-4xl md:text-5xl font-outfit font-bold tracking-tight mb-4">Open Source Credits</h1>
         <p className="text-muted-foreground mb-12">
-          GhostLy is built on the shoulders of giants. We are grateful to the open-source community for providing the tools that made this application possible. 
-          Below is a list of major third-party libraries we use and their respective licenses.
+          GhostLy stands on great open source software. We&apos;re grateful to the community that built the tools behind this app.
+          Below are the major libraries we use and their licenses.
         </p>
 
         <div className="space-y-12 text-white/80 leading-relaxed font-inter">

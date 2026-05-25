@@ -43,7 +43,7 @@ export function Hero() {
           className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed"
         >
           An AI assistant that reads your screen, right where you work. <br />
-          Use Claude, GPT, and Gemini without copy-pasting or switching apps.
+          Use Claude, GPT, or Gemini without leaving the app you&apos;re in.
         </motion.p>
 
         <motion.div

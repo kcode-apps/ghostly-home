@@ -45,14 +45,14 @@ export function Pricing() {
                      <span className="text-muted-foreground font-medium italic">ONE TIME</span>
                   </div>
                   <p className="text-sm text-primary/60 font-bold mb-8">
-                     Try everything for free. Pay only to remove the 20-query limit.
+                     Try everything free for 20 queries. Pay once to unlock unlimited use.
                   </p>
 
                   <div className="grid md:grid-cols-2 gap-x-8 gap-y-4 mb-12">
                      {[
                         "Claude, GPT & Gemini unified",
                         "Your own AI accounts",
-                        "Lower AI usage costs",
+                        "Optional token optimization",
                         "Hidden from Screen Share",
                         "Settings saved on your device",
                         "Always Private"
@@ -81,7 +81,7 @@ export function Pricing() {
                   </div>
 
                   <p className="mt-6 text-center text-xs text-muted-foreground opacity-60">
-                     Works with your own Claude, GPT, or Gemini accounts.
+                     Works with your own Claude, GPT, or Gemini accounts. Each license covers one device.
                   </p>
                </motion.div>
             </div>
@@ -89,7 +89,7 @@ export function Pricing() {
             <div className="mt-20 text-center max-w-2xl mx-auto p-6 rounded-3xl border border-white/5 bg-white/[0.02]">
                <h4 className="text-white font-bold mb-2">Total Control, Zero Fees</h4>
                <p className="text-muted-foreground text-sm">
-                  Standard AI apps charge $20/month for access. <strong>GhostLy doesn&apos;t.</strong> You pay GhostLy once, then pay your AI provider only for what you use. <strong>No middleman markups. No GhostLy subscription.</strong>
+                  Most AI apps charge $20/month just to use them. <strong>GhostLy doesn&apos;t.</strong> You pay once for the app, then pay your AI provider only for what you use. <strong>No middleman markups. No GhostLy subscription.</strong>
                </p>
             </div>
          </div>

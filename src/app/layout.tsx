@@ -12,7 +12,7 @@ const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://ghostlydesktop.com"),
   title: "GhostLy Desktop | AI Assistant That Reads Your Screen",
-  description: "GhostLy connects Claude, GPT, and Gemini to whatever is on your screen. No copy-pasting, no tab switching. Ask questions right where you work.",
+  description: "GhostLy connects Claude, GPT, and Gemini to whatever is on your screen. No copying and pasting, no switching tabs. Ask questions right where you work.",
   icons: {
     icon: [
       { url: "/favicon.ico" },

@@ -12,7 +12,7 @@ export default function PrivacyPage() {
         <div className="absolute inset-0 bg-glow opacity-10 pointer-events-none -z-10" />
         
         <h1 className="text-4xl md:text-5xl font-outfit font-bold tracking-tight mb-4">Privacy Policy</h1>
-        <p className="text-muted-foreground mb-12">Last Updated: May 7, 2026</p>
+        <p className="text-muted-foreground mb-12">Last Updated: May 23, 2026</p>
 
         <div className="space-y-10 text-white/80 leading-relaxed font-inter">
           <section className="space-y-4">
@@ -44,7 +44,7 @@ export default function PrivacyPage() {
               4. Sensitive Data Redaction <span className="text-sm font-semibold uppercase tracking-wide text-violet-300">(Beta)</span>
             </h2>
             <p>
-              GhostLy includes a <strong>Sensitive Data Redaction</strong> feature, currently in <strong>beta</strong>. It tries to hide personal details on your device, such as emails, phone numbers, and payment info, before anything is sent to an AI provider.
+              GhostLy includes a <strong>Sensitive Data Redaction</strong> feature (Secure Processing), currently in <strong>beta</strong>. On your device, it tries to hide personal details (such as emails, phone numbers, and payment info) and common credential patterns (such as API keys and secrets in environment files) before anything is sent to an AI provider.
             </p>
             <p>
               <strong>Important:</strong> Because this feature is in beta, it may not catch everything. You are still responsible for what you choose to share with AI providers.

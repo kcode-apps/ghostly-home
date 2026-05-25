@@ -88,7 +88,7 @@ export function HUDMockup() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative w-full max-w-[600px] mx-auto aspect-video sm:aspect-[16/10] bg-[#1a1a1a]/80 backdrop-blur-3xl rounded-[2rem] border border-white/10 shadow-2xl flex flex-col p-4 sm:p-6"
       >
-        {/* Header — matches real HUD: logo, title, status line */}
+        {/* Header: matches real HUD (logo, title, status line) */}
         <div className="flex items-start justify-between mb-4 pb-2 border-b border-white/5">
           <div className="flex flex-col select-none">
             <div className="flex items-center gap-2 sm:gap-3">
@@ -116,7 +116,7 @@ export function HUDMockup() {
           </div>
         </div>
 
-        {/* Response area — query anchor + answer; no screen preview inside HUD */}
+        {/* Response area: query anchor + answer, no screen preview inside HUD */}
         <div className="flex-1 rounded-2xl bg-black/20 border border-white/5 p-4 sm:p-5 mb-4 font-sans text-[13px] sm:text-[15px] leading-relaxed text-slate-200 min-h-0 overflow-hidden flex flex-col">
           {showQuery && (
             <motion.div
@@ -163,7 +163,7 @@ export function HUDMockup() {
           )}
         </div>
 
-        {/* Query input — matches real HUD */}
+        {/* Query input: matches real HUD */}
         <div className="shrink-0">
           <div className="text-[10px] font-bold uppercase tracking-widest text-white/40 px-2 mb-2">
             System Default

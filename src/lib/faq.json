@@ -5,7 +5,7 @@
     {
       "id": "perception",
       "question": "How does GhostLy read my screen?",
-      "answer": "GhostLy looks at what's on your active window and understands it in real time. Whether you're coding, reading a document, or reviewing a design, it picks up the details locally, so you don't have to copy-paste or take screenshots.",
+      "answer": "When you send a question, GhostLy captures what's on your active window at that moment, right on your Mac. Whether you're coding, reading a document, or reviewing a design, it uses that snapshot as context. No copying text, no attaching screenshots.",
       "category": "Features"
     },
     {
@@ -23,7 +23,7 @@
     {
       "id": "pii-redaction-beta",
       "question": "Does GhostLy hide personal information?",
-      "answer": "Yes, optionally, and it's on by default. Our beta privacy feature hides personal details on your Mac before anything is sent to AI. It's not perfect yet, so always double-check what you're sharing.",
+      "answer": "Yes. Secure Processing is on by default, and you can turn it off in Settings. This beta feature redacts sensitive details on your Mac before anything is sent to AI. That includes personal info like emails, phone numbers, and payment details, plus common patterns like API keys and secrets in environment files. It's not perfect yet, so always double-check what you're sharing.",
       "category": "Privacy"
     },
     {
@@ -35,37 +35,37 @@
     {
       "id": "context sources",
       "question": "What does GhostLy use as context?",
-      "answer": "GhostLy reads your active screen and clipboard. For text-heavy work it focuses on the words; for visual work it captures what you see. You can turn screen reading off in Settings when you just need a simple chat.",
+      "answer": "GhostLy reads your active screen and clipboard. When you're working with lots of text, it pulls the words. When you're looking at a design or UI, it captures what you see. Turn screen reading off in Settings anytime you just want a simple chat.",
       "category": "Features"
     },
     {
       "id": "shortcuts",
       "question": "Can I customize the shortcuts?",
-      "answer": "Yes. You can change the shortcut to open GhostLy (default ⌘+G) and other quick-action shortcuts in Settings.",
+      "answer": "Yes. Change the shortcut to open GhostLy (default ⌘+G) and set up other shortcuts in Settings.",
       "category": "Customization"
     },
     {
       "id": "licensing",
       "question": "Is GhostLy available for commercial use?",
-      "answer": "Yes. GhostLy aims to reduce your subscription fatigue. You can use all features of GhostLy indefinitely by purchasing a single lifetime license for $20.",
+      "answer": "Yes. GhostLy is a one time $20 purchase for lifetime use, with no monthly fee from us. Each license covers a limited number of devices, shown at checkout and in your Lemon Squeezy receipt.",
       "category": "Billing"
     },
     {
       "id": "token optimization",
       "question": "How does GhostLy help me spend less on AI?",
-      "answer": "Pasting huge blocks of text or uploading full screenshots can get expensive fast. GhostLy sends only what's relevant from your screen, which typically uses less of your AI provider's usage.",
+      "answer": "Copying and pasting often sends more context than you need. GhostLy can trim and structure screen context before it reaches your provider, especially in text mode with token optimization turned on. Visual mode may still send a screen capture when that's the best way to answer your question. What you spend depends on your settings and the task.",
       "category": "Cost"
     },
     {
       "id": "windows release",
       "question": "Is GhostLy only available for Mac?",
-      "answer": "Currently, yes. However, Windows and Linux releases are already in development and are scheduled to launch before August 2026.",
+      "answer": "For now, yes. GhostLy is built for macOS. Windows is in development. Join the waitlist on our homepage and we'll email you when it's ready. Linux is on the roadmap, but we don't have a date to share yet.",
       "category": "Future"
     },
     {
       "id": "updates",
-      "question": "What kind of after-sales support can users expect?",
-      "answer": "We ship bug fixes and improvements regularly. New features arrive in minor updates (for example, v1.1.0).",
+      "question": "What support comes with my purchase?",
+      "answer": "We release bug fixes and improvements regularly. New features show up in minor updates, like v1.1.0.",
       "category": "Updates"
     },
     {

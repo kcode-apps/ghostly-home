@@ -26,27 +26,27 @@ const features: Feature[] = [
   },
   {
     title: "All Models, One App",
-    description: "Switch between Claude, GPT, and Gemini in one place. If one provider is unavailable, GhostLy can try another automatically.",
+    description: "Switch between Claude, GPT, and Gemini in one place. If a provider fails, GhostLy can fall back to another model when you've configured backup models in Settings.",
     icon: Globe,
     color: "text-sky-400",
   },
   {
     title: "Sensitive Data Redaction",
     description:
-      "GhostLy can protect your personal details on your device by redacting them before they’re sent to AI, like emails, phone numbers, and payment info.",
+      "Before anything reaches AI, GhostLy can redact sensitive details on your device. That includes personal info, credentials, and secrets from files like .env. It's still in beta, so treat it as helpful, not foolproof.",
     icon: LockKeyhole,
     color: "text-violet-400",
     badge: "Beta",
   },
   {
-    title: "Built-In Privacy",
+    title: "Privacy on Your Mac",
     description: "Your screen stays on your Mac. GhostLy processes what it reads locally, and can hide itself from screen recordings and video calls.",
     icon: ShieldCheck,
     color: "text-indigo-400",
   },
   {
     title: "Smarter AI, Lower Costs",
-    description: "GhostLy trims unnecessary detail before sending to AI, so you use less and pay less with your provider.",
+    description: "Optional token optimization trims and structures text context before it reaches your provider. Visual queries may still send a screen capture when needed.",
     icon: Eye,
     color: "text-teal-400",
   },
@@ -79,8 +79,8 @@ export function Features() {
             transition={{ delay: 0.1 }}
             className="text-lg text-muted-foreground"
           >
-            GhostLy strips away the busywork of traditional AI apps. No more copy-pasting.
-            No more setting up context by hand. Just help, right where you need it.
+            GhostLy cuts out the busywork of using AI in a separate tab. Stop copying context over,
+            stop explaining what&apos;s on your screen. Just ask where you&apos;re working.
           </motion.p>
         </div>
 
