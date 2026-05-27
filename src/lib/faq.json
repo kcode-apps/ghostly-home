@@ -41,7 +41,7 @@
     {
       "id": "shortcuts",
       "question": "Can I customize the shortcuts?",
-      "answer": "Yes. Change the shortcut to open GhostLy (default ⌘+G) and set up other shortcuts in Settings.",
+      "answer": "Yes. Change the shortcut to open GhostLy (default ⌥⌘G) and set up other shortcuts in Settings.",
       "category": "Customization"
     },
     {

@@ -128,7 +128,7 @@ export function PerceptionLoop() {
                 </div>
                 <h5 className="text-xl font-bold text-white mb-2 font-outfit">Open from anywhere.</h5>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Press <kbd className="px-1.5 py-0.5 rounded bg-white/5 border border-white/10 text-[10px] text-white/50">⌘+G</kbd> to open GhostLy over any app.
+                  Press <kbd className="px-1.5 py-0.5 rounded bg-white/5 border border-white/10 text-[10px] text-white/50">⌥⌘G</kbd> to open GhostLy over any app.
                 </p>
               </motion.div>
             )}
